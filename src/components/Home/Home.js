@@ -24,10 +24,8 @@ function Home(props) {
             </ScrollAnimation>
           </div> */}
           <ScrollAnimation animateIn="Home-type-writer" className="Home-text">
-            Hello World
-          </ScrollAnimation>
-          <ScrollAnimation animateIn="Home-type-writer" className="Home-text">
-            Hubert Hung
+            <p>Hello World</p>
+            <p>Hubert Hung</p>
           </ScrollAnimation>
           <IconContext.Provider value={{ color: "white", size: "2em" }}>
             <button
