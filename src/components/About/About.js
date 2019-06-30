@@ -6,7 +6,7 @@ function About(props) {
   const { setRef } = props;
 
   return (
-    <div className="About" ref={setRef}>
+    <div className="About" ref={ref => setRef("About", ref)}>
       <h2 className="About-title">About</h2>
     </div>
   );

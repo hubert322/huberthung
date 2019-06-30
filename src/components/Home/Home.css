@@ -64,7 +64,6 @@
   justify-content: center;
   align-items: center;
 
-  font-family: Consolas, "Courier New", monospace;
   color: white;
   text-align: center;
 }
@@ -76,16 +75,17 @@
 }
 
 .Home-type-writer {
-  font-family: Consolas, "Courier New", monospace;
-
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.15em solid #7df9ff; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   letter-spacing: 0.15em; /* Adjust as needed */
-  animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+  animation: typing 2s steps(30, end), blink-caret 0.75s step-end infinite;
 
-  display: inline-block;
   align-self: center;
+  margin: 0;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-size: 2em;
 }
 
 /* The typing effect */
@@ -110,13 +110,5 @@
 }
 
 .Home-button {
-  background: none;
-  border: none;
-  align-self: center;
-  cursor: pointer;
   padding: 0;
-}
-
-.Home-button:focus {
-  outline: none;
 }

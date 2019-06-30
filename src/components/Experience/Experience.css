@@ -1,4 +1,4 @@
-.About {
+.Experience {
   width: 100%;
   height: 95vh;
   display: flex;
@@ -7,6 +7,6 @@
   align-items: center;
 }
 
-.About-title {
+.Experience-title {
   color: rgb(205, 199, 188);
 }

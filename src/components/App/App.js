@@ -3,23 +3,30 @@ import NavBar from "../NavBar/NavBar";
 import Home from "../Home/Home";
 import About from "../About/About";
 import "./App.css";
+import Experience from "../Experience/Experience";
 
 function App() {
-  const [aboutRef, setAboutRef] = React.useState(React.createRef());
+  const refs = {};
 
-  function scrollToRef() {
-    aboutRef.scrollIntoView({
-      behavior: "smooth",
-      block: "nearest"
-    });
-    console.log("Hello");
+  function setRef(key, value) {
+    refs[key] = value;
+  }
+
+  function scrollToRef(key) {
+    if (key in refs) {
+      refs[key].scrollIntoView({
+        behavior: "smooth",
+        block: "nearest"
+      });
+    }
   }
 
   return (
     <div className="App">
-      <Home onClick={scrollToRef} />
-      <NavBar />
-      <About setRef={setAboutRef} />
+      <Home setRef={setRef} onClick={scrollToRef} />
+      <NavBar onClick={scrollToRef} />
+      <About setRef={setRef} />
+      <Experience setRef={setRef} />
     </div>
   );
 }

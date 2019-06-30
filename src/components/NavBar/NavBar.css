@@ -1,0 +1,32 @@
+.NavBar {
+  position: sticky;
+  top: 0;
+  height: 5vh;
+}
+
+.NavBar-content {
+  background: #071e2e;
+  height: 4.7vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.NavBar-button {
+  color: white;
+  padding-left: 2%;
+  padding-right: 2%;
+  font-size: 100%;
+}
+
+.NavBar-home {
+  margin-right: auto;
+}
+
+.NavBar-bottom-line {
+  background: #7df9ff;
+  height: 0.3vh;
+}

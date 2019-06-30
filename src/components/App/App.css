@@ -2,6 +2,7 @@
   background-color: #131313;
   width: 100%;
   height: 100%;
+  font-family: Consolas, "Courier New", monospace;
 }
 
 .App-logo {
@@ -32,4 +33,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+button {
+  background: none;
+  border: none;
+  align-self: center;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+button:focus {
+  outline: none;
 }
