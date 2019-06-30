@@ -14,20 +14,11 @@ function Home(props) {
       <div className="Home-gradient-background" />
       <div className="Home-radial-background">
         <div className="Home-content">
-          {/* <div id="Home-text-div" className="Home-text-div">
-            <ScrollAnimation
-              animateIn="Home-type-writer"
-              animateOut="fadeOut"
-              scrollableParentSelector="#Home-text-div"
-            >
-              <h1 className="Home-text">Hello World</h1>
-            </ScrollAnimation>
-          </div> */}
           <ScrollAnimation animateIn="Home-type-writer" className="Home-text">
-            <p>Hello World</p>
-            <p>Hubert Hung</p>
+            <h1>Hello World</h1>
+            <h1>Hubert Hung</h1>
           </ScrollAnimation>
-          <IconContext.Provider value={{ color: "white", size: "2em" }}>
+          <IconContext.Provider value={{ color: "white", size: "4em" }}>
             <button
               className="Home-button"
               type="button"

@@ -74,13 +74,6 @@
   justify-content: center;
 }
 
-.Home-text-div {
-  height: 30vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .Home-type-writer {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.15em solid #7df9ff; /* The typwriter cursor */
@@ -115,7 +108,7 @@
   margin: 0;
   padding-top: 5%;
   padding-bottom: 5%;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .Home-button {

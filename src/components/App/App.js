@@ -1,9 +1,9 @@
 import React from "react";
-import NavBar from "../NavBar/NavBar";
 import Home from "../Home/Home";
+import NavBar from "../NavBar/NavBar";
 import About from "../About/About";
-import "./App.css";
 import Experience from "../Experience/Experience";
+import "./App.css";
 
 function App() {
   const refs = {};
@@ -16,7 +16,7 @@ function App() {
     if (key in refs) {
       refs[key].scrollIntoView({
         behavior: "smooth",
-        block: "nearest"
+        block: "end"
       });
     }
   }
