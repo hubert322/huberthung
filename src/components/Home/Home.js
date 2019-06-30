@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { IconContext } from "react-icons";
 import { TiArrowSortedDown } from "react-icons/ti";
+import ScrollAnimation from "react-animate-on-scroll";
+import "animate.css/animate.min.css";
 import "./Home.css";
 
 function Home(props) {
@@ -12,8 +14,21 @@ function Home(props) {
       <div className="Home-gradient-background" />
       <div className="Home-radial-background">
         <div className="Home-content">
-          <p className="Home-type-writer">Hello World</p>
-          <p className="Home-type-writer">Hubert Hung</p>
+          {/* <div id="Home-text-div" className="Home-text-div">
+            <ScrollAnimation
+              animateIn="Home-type-writer"
+              animateOut="fadeOut"
+              scrollableParentSelector="#Home-text-div"
+            >
+              <h1 className="Home-text">Hello World</h1>
+            </ScrollAnimation>
+          </div> */}
+          <ScrollAnimation animateIn="Home-type-writer" className="Home-text">
+            Hello World
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="Home-type-writer" className="Home-text">
+            Hubert Hung
+          </ScrollAnimation>
           <IconContext.Provider value={{ color: "white", size: "2em" }}>
             <button
               className="Home-button"
