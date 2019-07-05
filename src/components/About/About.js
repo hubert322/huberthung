@@ -1,30 +1,49 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
-import logo from "../../assets/images/logo.svg";
+import { FiCheckSquare } from "react-icons/fi";
+import profilePic from "../../assets/images/profile.jpg";
 import "./About.css";
 
 function About(props) {
-  const aboutTextIntro = `
+  const basicInfoTextContent = `
     Hello, my name is Hubert (Tzu-Fan) Hung, a computer science study at the 
     University of Michigan, Ann Arbor. I enjoy creating stuff with different
     technology.
   `;
 
   const { setRef } = props;
+  const basicInfoImage = useRef();
+  const basicInfoText = useRef();
+  const [basicInfoImageWidth, setBasicInfoImageWidth] = useState();
+
+  useEffect(() => {
+    setBasicInfoImageWidth(
+      basicInfoImage.current.getBoundingClientRect().width
+    );
+  });
 
   return (
     <div className="About" ref={ref => setRef("About", ref)}>
       <h2 className="About-title">About</h2>
-      <div className="About-intro">
-        <div className="About-text-div">
-          <p className="About-text-intro">{aboutTextIntro}</p>
+      <div className="About-content">
+        <div className="About-basic-info">
+          <img
+            src={profilePic}
+            alt="Profile Pic"
+            className="About-basic-info-image"
+            ref={basicInfoImage}
+          />
+          <p
+            className="About-basic-info-text"
+            ref={basicInfoText}
+            style={{ width: basicInfoImageWidth }}
+          >
+            {basicInfoTextContent}
+          </p>
         </div>
-        <div className="About-image-div">
-          <img src={logo} alt="Profile Pic" className="About-image" />
+        <div className="About-skills">
+          <SkillTable />
         </div>
-      </div>
-      <div className="About-skills">
-        <SkillTable />
       </div>
     </div>
   );
@@ -59,7 +78,9 @@ function SkillTable() {
           <tr key={skill}>
             <td>{skill}</td>
             {Array.from(Array(column.indexOf(rows[skill])), (_, i) => (
-              <td key={i}>*</td>
+              <td key={i} align="right">
+                <FiCheckSquare />
+              </td>
             ))}
           </tr>
         ))}

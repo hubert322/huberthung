@@ -1,34 +1,24 @@
-.NavBar {
+.Arrow {
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  bottom: 0;
   width: 100%;
   height: 10vh;
 }
 
-.NavBar-content {
-  background: #071e2e;
+.Arrow-content {
   height: 95%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   padding-left: 3%;
   padding-right: 3%;
 }
 
-.NavBar-button {
+.Arrow-button {
   color: white;
   padding-left: 2%;
   padding-right: 2%;
   font-size: 1.5rem;
-}
-
-.NavBar-home {
-  margin-right: auto;
-}
-
-.NavBar-bottom-line {
-  background: #7df9ff;
-  height: 5%;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { IconContext } from "react-icons";
-import { TiArrowSortedDown } from "react-icons/ti";
+import { IoIosArrowDown } from "react-icons/io";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.min.css";
 import "./Home.css";
@@ -24,7 +24,7 @@ function Home(props) {
               type="button"
               onClick={() => onClick("About")}
             >
-              <TiArrowSortedDown />
+              <IoIosArrowDown />
             </button>
           </IconContext.Provider>
         </div>

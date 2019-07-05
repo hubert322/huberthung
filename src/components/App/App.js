@@ -3,6 +3,7 @@ import Home from "../Home/Home";
 import NavBar from "../NavBar/NavBar";
 import About from "../About/About";
 import Experience from "../Experience/Experience";
+import Arrow from "../Arrow/Arrow";
 import "./App.css";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       <Home setRef={setRef} onClick={scrollToRef} />
       <NavBar onClick={scrollToRef} />
       <About setRef={setRef} />
+      {/* <Arrow onClick={scrollToRef} /> */}
       <Experience setRef={setRef} />
     </div>
   );
