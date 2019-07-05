@@ -15,9 +15,14 @@ function App() {
 
   function scrollToRef(key) {
     if (key in refs) {
-      refs[key].scrollIntoView({
-        behavior: "smooth",
-        block: "end"
+      // NavBar height = 10vh
+      let headerOffset = window.innerHeight * 0.1;
+      let bodyPosition = document.body.getBoundingClientRect().top;
+      let elementPosition = refs[key].getBoundingClientRect().top;
+      let offset = elementPosition - bodyPosition - headerOffset;
+      window.scrollTo({
+        top: offset,
+        behavior: "smooth"
       });
     }
   }
@@ -27,8 +32,9 @@ function App() {
       <Home setRef={setRef} onClick={scrollToRef} />
       <NavBar onClick={scrollToRef} />
       <About setRef={setRef} />
-      {/* <Arrow onClick={scrollToRef} /> */}
+      <Arrow onClick={scrollToRef} target="Experience" />
       <Experience setRef={setRef} />
+      <Arrow onClick={scrollToRef} target="Home" />
     </div>
   );
 }

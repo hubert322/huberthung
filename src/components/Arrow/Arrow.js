@@ -1,31 +1,26 @@
 import React from "react";
 import { IconContext } from "react-icons";
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import "./Arrow.css";
 import PropTypes from "prop-types";
 
 function Arrow(props) {
-  const { onClick } = props;
+  const { onClick, target } = props;
 
   return (
-    <header className="Arrow">
-      <div className="Arrow-content">
-        <IconContext.Provider value={{ color: "white", size: "4em" }}>
-          <button
-            className="Arrow-button"
-            type="button"
-            onClick={() => onClick("Experience")}
-          >
-            <IoIosArrowDown />
-          </button>
-        </IconContext.Provider>
-      </div>
-    </header>
+    <div className="Arrow">
+      <IconContext.Provider value={{ color: "white", size: "3rem" }}>
+        <button type="button" onClick={() => onClick(target)}>
+          {target === "Home" ? <IoIosArrowUp /> : <IoIosArrowDown />}
+        </button>
+      </IconContext.Provider>
+    </div>
   );
 }
 
 Arrow.propTypes = {
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
+  target: PropTypes.string.isRequired
 };
 
 export default Arrow;

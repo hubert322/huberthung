@@ -1,8 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { IconContext } from "react-icons";
-import { IoIosArrowDown } from "react-icons/io";
 import ScrollAnimation from "react-animate-on-scroll";
+import Arrow from "../Arrow/Arrow";
 import "animate.css/animate.min.css";
 import "./Home.css";
 
@@ -18,15 +17,7 @@ function Home(props) {
             <h1>Hello World</h1>
             <h1>Hubert Hung</h1>
           </ScrollAnimation>
-          <IconContext.Provider value={{ color: "white", size: "4em" }}>
-            <button
-              className="Home-button"
-              type="button"
-              onClick={() => onClick("About")}
-            >
-              <IoIosArrowDown />
-            </button>
-          </IconContext.Provider>
+          <Arrow onClick={onClick} target="About" />
         </div>
       </div>
     </div>

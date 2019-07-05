@@ -23,9 +23,9 @@ function About(props) {
   });
 
   return (
-    <div className="About" ref={ref => setRef("About", ref)}>
-      <h2 className="About-title">About</h2>
-      <div className="About-content">
+    <div className="section-container" ref={ref => setRef("About", ref)}>
+      <h2 className="section-title">About</h2>
+      <div className="section-content">
         <div className="About-basic-info">
           <img
             src={profilePic}
