@@ -10,3 +10,34 @@
 .Experience-title {
   color: rgb(205, 199, 188);
 }
+
+.Experience-main-card {
+  width: 40%;
+  height: 100%;
+  border: 2px solid #7df9ff;
+  border-radius: 5px;
+  margin-right: 2%;
+}
+
+.Experience-card-title {
+  margin-left: 1em;
+}
+
+.Experience-sub-div {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+}
+
+.Experience-sub-card {
+  width: 45%;
+  height: 45%;
+  border: 2px solid #7df9ff;
+  border-radius: 5px;
+  margin: 1%;
+  font-size: .9rem;
+}
