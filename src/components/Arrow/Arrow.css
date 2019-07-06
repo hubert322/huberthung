@@ -1,8 +1,14 @@
 .Arrow {
   width: 100%;
-  height: 4vh;
+  height: 9vh;
   padding-bottom: 1vh;
   display: flex;
   justify-content: center;
   overflow: hidden;
+}
+
+.Arrow-button {
+  padding: 0;
+  margin: 0;
+  height: 90%;
 }

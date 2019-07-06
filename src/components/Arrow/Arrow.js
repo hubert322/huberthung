@@ -10,7 +10,11 @@ function Arrow(props) {
   return (
     <div className="Arrow">
       <IconContext.Provider value={{ color: "white", size: "3rem" }}>
-        <button type="button" onClick={() => onClick(target)}>
+        <button
+          className="Arrow-button animated infinite heartBeat slower delay-1s"
+          type="button"
+          onClick={() => onClick(target)}
+        >
           {target === "Home" ? <IoIosArrowUp /> : <IoIosArrowDown />}
         </button>
       </IconContext.Provider>
