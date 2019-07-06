@@ -16,11 +16,11 @@ function About(props) {
   const basicInfoText = useRef();
   const [basicInfoImageWidth, setBasicInfoImageWidth] = useState();
 
-  useEffect(() => {
-    setBasicInfoImageWidth(
-      basicInfoImage.current.getBoundingClientRect().width
-    );
-  });
+  // useEffect(() => {
+  //   setBasicInfoImageWidth(
+  //     basicInfoImage.current.getBoundingClientRect().width
+  //   );
+  // });
 
   return (
     <div className="section-container" ref={ref => setRef("About", ref)}>
@@ -33,11 +33,7 @@ function About(props) {
             className="About-basic-info-image"
             ref={basicInfoImage}
           />
-          <p
-            className="About-basic-info-text"
-            ref={basicInfoText}
-            style={{ width: basicInfoImageWidth }}
-          >
+          <p className="About-basic-info-text" ref={basicInfoText}>
             {basicInfoTextContent}
           </p>
         </div>

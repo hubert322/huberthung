@@ -9,7 +9,7 @@
   align-items: center;
   flex-shrink: 0;
   font-family: Consolas, "Courier New", monospace;
-  /* font-size: 16px; */
+  color: white;
 }
 
 .App-logo {
