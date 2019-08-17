@@ -1,23 +1,24 @@
 .About-basic-info {
-  width: 50%;
   height: 100%;
-  display: flex;
+  display: inline-block;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  position: relative;
 }
 
 .About-basic-info-image {
   max-width: 100%;
-  max-height: 70%;
+  max-height: 80%;
   height: auto;
 }
 
 .About-basic-info-text {
   color: white;
-  text-align: left;
-  font-size: 1rem;
-  line-height: 1rem;
+  text-align: center;
+  /* font-size: 1rem;
+  line-height: 1rem; */
+  /* position: absolute; */
 }
 
 .About-skills {

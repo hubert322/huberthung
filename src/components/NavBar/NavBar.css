@@ -25,11 +25,17 @@
   font-size: 1.5rem;
 }
 
-.NavBar-home {
+.NavBar-button-home {
   margin-right: auto;
 }
 
 .NavBar-bottom-line {
   background: #7df9ff;
   height: 5%;
+}
+
+@media (max-width: 767.98px) {
+  .NavBar-content {
+    justify-content: flex-start;
+  }
 }

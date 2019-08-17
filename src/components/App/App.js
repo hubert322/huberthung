@@ -3,6 +3,7 @@ import Home from "../Home/Home";
 import NavBar from "../NavBar/NavBar";
 import About from "../About/About";
 import Experience from "../Experience/Experience";
+import Contact from "../Contact/Contact";
 import Arrow from "../Arrow/Arrow";
 import "./App.css";
 
@@ -28,12 +29,14 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="d-flex flex-column justify-content-center align-items-center App">
       <Home setRef={setRef} onClick={scrollToRef} />
       <NavBar onClick={scrollToRef} />
       <About setRef={setRef} />
       <Arrow onClick={scrollToRef} target="Experience" />
       <Experience setRef={setRef} />
+      <Arrow onClick={scrollToRef} target="Contact" />
+      <Contact setRef={setRef} />
       <Arrow onClick={scrollToRef} target="Home" />
     </div>
   );
