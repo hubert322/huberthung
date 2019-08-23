@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import PropTypes from "prop-types";
 import { FiCheckSquare } from "react-icons/fi";
 import profilePic from "../../assets/images/profile.jpg";
@@ -12,13 +12,6 @@ function About(props) {
   const { setRef } = props;
   const basicInfoImage = useRef();
   const basicInfoText = useRef();
-  const [basicInfoImageWidth, setBasicInfoImageWidth] = useState();
-
-  // useEffect(() => {
-  //   setBasicInfoImageWidth(
-  //     basicInfoImage.current.getBoundingClientRect().width
-  //   );
-  // });
 
   return (
     <div className="section-container" ref={ref => setRef("About", ref)}>
@@ -39,28 +32,6 @@ function About(props) {
           <h3>University of Michigan, Ann Arbor</h3>
           <h3>Computer Science Engineering</h3>
           <h3>GPA: 3.83</h3>
-          <SkillTable />
-        </div>
-      </div>
-    </div>
-  );
-
-  return (
-    <div className="section-container" ref={ref => setRef("About", ref)}>
-      <h2 className="section-title">About</h2>
-      <div className="section-content">
-        <div className="About-basic-info">
-          <img
-            src={profilePic}
-            alt="Profile Pic"
-            className="About-basic-info-image"
-            ref={basicInfoImage}
-          />
-          <p className="About-basic-info-text" ref={basicInfoText}>
-            {basicInfoTextContent}
-          </p>
-        </div>
-        <div className="About-skills">
           <SkillTable />
         </div>
       </div>
@@ -103,30 +74,6 @@ function SkillTable() {
         </div>
       ))}
     </div>
-  );
-
-  return (
-    <table>
-      <thead>
-        <tr>
-          {column.map(column => (
-            <th key={column}>{column}</th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {Object.keys(rows).map(skill => (
-          <tr key={skill}>
-            <td>{skill}</td>
-            {Array.from(Array(column.indexOf(rows[skill])), (_, i) => (
-              <td key={i} align="right">
-                <FiCheckSquare />
-              </td>
-            ))}
-          </tr>
-        ))}
-      </tbody>
-    </table>
   );
 }
 
