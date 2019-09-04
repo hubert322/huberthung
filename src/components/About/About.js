@@ -50,8 +50,9 @@ function SkillTable() {
     Javascript: "Elementary",
     React: "Elementary",
     AngularJs: "Elementary",
+    PHP: "Elementary",
     Python: "Elementary",
-    Pandas: "Elementary"
+    MySQL: "Elementary"
   };
 
   return (
