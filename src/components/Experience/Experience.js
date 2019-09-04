@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import { IconContext } from "react-icons";
+import { IoIosArrowBack } from "react-icons/io";
 import "./Experience.css";
 import "../../assets/styles/section.css";
 
 function Experience(props) {
+  const mainCardTitle = "Learning A-Z";
   const subCardTitles = [
     "Data Analysis on Canvas",
     "Mobile Phone Laser Tag",
@@ -12,14 +15,51 @@ function Experience(props) {
   ];
 
   const { setRef } = props;
-  const [cardDetail, setCardDetail] = useState(null);
+  const [overlay, setOverlay] = useState(null);
+  const [cardDetailCardTitle, setCardDetailCardTitle] = useState(null);
 
-  function showCardDetail(event) {
-    setCardDetail(event.currentTarget.innerText);
+  function showOverlay(event) {
+    setOverlay(event.currentTarget.innerText);
+  }
+
+  function hideOverlay() {
+    setOverlay(null);
+  }
+
+  function showCardDetail(cardTitle) {
+    hideOverlay();
+    setCardDetailCardTitle(cardTitle);
+  }
+
+  function chooseCardDetail() {
+    switch (cardDetailCardTitle) {
+      case "Learning A-Z":
+        return <Laz />;
+      default:
+        return <p>NULL</p>;
+    }
   }
 
   function hideCardDetail() {
-    setCardDetail(null);
+    setCardDetailCardTitle(null);
+  }
+
+  if (cardDetailCardTitle !== null) {
+    return (
+      <div className="section-container" ref={ref => setRef("Experience", ref)}>
+        <div className="Experience-card-detail-title-div">
+          <IconContext.Provider value={{ color: "white", size: "3rem" }}>
+            <button type="button" onClick={hideCardDetail}>
+              <IoIosArrowBack />
+            </button>
+          </IconContext.Provider>
+          <h2 className="section-title Experience-card-detail-title">
+            {cardDetailCardTitle}
+          </h2>
+        </div>
+        <div className="section-content">{chooseCardDetail()}</div>
+      </div>
+    );
   }
 
   return (
@@ -28,22 +68,26 @@ function Experience(props) {
       <div className="section-content">
         <div
           className="Experience-main-card"
-          onMouseEnter={showCardDetail}
-          onMouseLeave={hideCardDetail}
+          onMouseEnter={showOverlay}
+          onMouseLeave={hideOverlay}
         >
-          <h3 className="Experience-card-title">Learning A-Z</h3>
-          {cardDetail === "Learning A-Z" ? <CardDetail /> : null}
+          <h3 className="Experience-card-title">{mainCardTitle}</h3>
+          {overlay === mainCardTitle ? (
+            <Overlay onClick={showCardDetail} cardTitle={mainCardTitle} />
+          ) : null}
         </div>
         <div className="Experience-sub-div">
           {subCardTitles.map(title => (
             <div
               key={title}
               className="Experience-sub-card"
-              onMouseEnter={showCardDetail}
-              onMouseLeave={hideCardDetail}
+              onMouseEnter={showOverlay}
+              onMouseLeave={hideOverlay}
             >
               <h4 className="Experience-card-title">{title}</h4>
-              {cardDetail === title ? <CardDetail /> : null}
+              {overlay === title ? (
+                <Overlay onClick={showCardDetail} cardTitle={title} />
+              ) : null}
             </div>
           ))}
         </div>
@@ -56,13 +100,34 @@ Experience.propTypes = {
   setRef: PropTypes.func.isRequired
 };
 
-function CardDetail() {
+function Overlay(props) {
+  const { onClick, cardTitle } = props;
+
   return (
     <div className="Experience-overlay">
-      <button className="Card-Detail-button" type="button">
+      <button
+        className="Experience-overlay-button"
+        type="button"
+        onClick={() => onClick(cardTitle)}
+      >
         Learn More
       </button>
     </div>
+  );
+}
+
+Overlay.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  cardTitle: PropTypes.string.isRequired
+};
+
+function Laz() {
+  return (
+    <p>
+      I implemented a new feature that allows teachers to generate reward cards
+      and students to redeem them through QR codes to increase student and
+      teacher interaction with our products even offline
+    </p>
   );
 }
 
