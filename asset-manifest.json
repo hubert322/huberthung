@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/huberthung/static/css/main.a4e5630a.chunk.css",
-    "main.js": "/huberthung/static/js/main.2ab66cbb.chunk.js",
-    "main.js.map": "/huberthung/static/js/main.2ab66cbb.chunk.js.map",
-    "runtime~main.js": "/huberthung/static/js/runtime~main.4d8eb697.js",
-    "runtime~main.js.map": "/huberthung/static/js/runtime~main.4d8eb697.js.map",
-    "static/css/2.8b8befd2.chunk.css": "/huberthung/static/css/2.8b8befd2.chunk.css",
-    "static/js/2.13b446b4.chunk.js": "/huberthung/static/js/2.13b446b4.chunk.js",
-    "static/js/2.13b446b4.chunk.js.map": "/huberthung/static/js/2.13b446b4.chunk.js.map",
-    "index.html": "/huberthung/index.html",
-    "precache-manifest.b60cca3377d2bf12a0e9f5994ee70b73.js": "/huberthung/precache-manifest.b60cca3377d2bf12a0e9f5994ee70b73.js",
-    "service-worker.js": "/huberthung/service-worker.js",
-    "static/css/2.8b8befd2.chunk.css.map": "/huberthung/static/css/2.8b8befd2.chunk.css.map",
-    "static/css/main.a4e5630a.chunk.css.map": "/huberthung/static/css/main.a4e5630a.chunk.css.map",
-    "static/media/profile.jpg": "/huberthung/static/media/profile.b263d7a8.jpg"
+    "main.css": "huberthung.me/static/css/main.a4e5630a.chunk.css",
+    "main.js": "huberthung.me/static/js/main.714a8ea6.chunk.js",
+    "main.js.map": "huberthung.me/static/js/main.714a8ea6.chunk.js.map",
+    "runtime~main.js": "huberthung.me/static/js/runtime~main.7a83dc20.js",
+    "runtime~main.js.map": "huberthung.me/static/js/runtime~main.7a83dc20.js.map",
+    "static/css/2.8b8befd2.chunk.css": "huberthung.me/static/css/2.8b8befd2.chunk.css",
+    "static/js/2.13b446b4.chunk.js": "huberthung.me/static/js/2.13b446b4.chunk.js",
+    "static/js/2.13b446b4.chunk.js.map": "huberthung.me/static/js/2.13b446b4.chunk.js.map",
+    "index.html": "huberthung.me/index.html",
+    "precache-manifest.0b0353c2b66eda470a14d10fc7464b15.js": "huberthung.me/precache-manifest.0b0353c2b66eda470a14d10fc7464b15.js",
+    "service-worker.js": "huberthung.me/service-worker.js",
+    "static/css/2.8b8befd2.chunk.css.map": "huberthung.me/static/css/2.8b8befd2.chunk.css.map",
+    "static/css/main.a4e5630a.chunk.css.map": "huberthung.me/static/css/main.a4e5630a.chunk.css.map",
+    "static/media/profile.jpg": "huberthung.me/static/media/profile.b263d7a8.jpg"
   }
 }
