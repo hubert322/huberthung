@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9124dc8fa4ab0eaa38768ba8fa72388e",
+    "revision": "956e040e0ad2dea065dd172732a6e063",
     "url": "/huberthung/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/huberthung/static/css/2.8b8befd2.chunk.css"
   },
   {
-    "revision": "0c9ec6852ec86a76d63d",
+    "revision": "a3a4acc88fd3eaa68b3c",
     "url": "/huberthung/static/css/main.a4e5630a.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/huberthung/static/js/2.4c3d16e1.chunk.js"
   },
   {
-    "revision": "0c9ec6852ec86a76d63d",
-    "url": "/huberthung/static/js/main.1b2802b0.chunk.js"
+    "revision": "a3a4acc88fd3eaa68b3c",
+    "url": "/huberthung/static/js/main.e4804b0f.chunk.js"
   },
   {
     "revision": "726094e431403fc0aecb",
