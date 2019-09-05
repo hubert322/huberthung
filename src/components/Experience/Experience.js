@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { IconContext } from "react-icons";
 import { IoIosArrowBack } from "react-icons/io";
-import "./Experience.css";
 import "../../assets/styles/section.css";
+import "./Experience.css";
 
 function Experience(props) {
   const mainCardTitle = "Learning A-Z";
@@ -57,7 +57,9 @@ function Experience(props) {
             {cardDetailCardTitle}
           </h2>
         </div>
-        <div className="section-content">{chooseCardDetail()}</div>
+        <div className="section-content Experience-card-detail-content">
+          {chooseCardDetail()}
+        </div>
       </div>
     );
   }
@@ -123,11 +125,16 @@ Overlay.propTypes = {
 
 function Laz() {
   return (
-    <p>
-      I implemented a new feature that allows teachers to generate reward cards
-      and students to redeem them through QR codes to increase student and
-      teacher interaction with our products even offline
-    </p>
+    <>
+      <p>
+        I implemented a new feature that allows teachers to generate reward
+        cards and students to redeem them through QR codes to increase student
+        and teacher interaction with our products even offline
+      </p>
+      <button className="Experience-overlay-button" type="button">
+        View Demo
+      </button>
+    </>
   );
 }
 
