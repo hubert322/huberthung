@@ -21,29 +21,45 @@
   /* position: absolute; */
 }
 
-.About-skills {
-  width: 50%;
-  height: 100%;
-  color: white;
-}
-
-table {
-  table-layout: fixed;
+.About-seperator {
+  border-top: 1px solid #7df9ff;
   width: 100%;
+  height: 5px;
+  margin-bottom: 5px;
 }
 
-th,
-td {
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding: 15px;
-  text-align: left;
-  font-size: 1rem;
-  text-align: center;
+.About-skills {
   color: white;
+  padding-left: 0;
 }
 
-th {
-  color: #7df9ff;
+.About-skills-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+h4 {
+  margin-bottom: 0;
+}
+
+.About-bar-border {
+  border: 2px solid #7df9ff;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  margin-left: auto;
+}
+
+.About-bar-filled {
+  background: #7df9ff;
+  height: 100%;
+}
+
+.About-bar-percent {
+  margin: 0;
+  margin-left: auto;
 }

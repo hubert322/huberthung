@@ -6,7 +6,7 @@ import "./About.css";
 
 function About(props) {
   const basicInfoTextContent = `
-    Tzu-Fan Hung
+    Hubert Tzu-Fan Hung
   `;
 
   const { setRef } = props;
@@ -32,6 +32,8 @@ function About(props) {
           <h3>University of Michigan, Ann Arbor</h3>
           <h3>Computer Science Engineering</h3>
           <h3>GPA: 3.83</h3>
+          <div className="About-seperator" />
+          <h3>Skills</h3>
           <SkillTable />
         </div>
       </div>
@@ -46,32 +48,36 @@ About.propTypes = {
 function SkillTable() {
   const column = ["", "Beginner", "Elementary", "Intermediate"];
   const rows = {
-    "C++": "Intermediate",
-    Javascript: "Elementary",
-    React: "Elementary",
-    AngularJs: "Elementary",
-    PHP: "Elementary",
-    Python: "Elementary",
-    MySQL: "Elementary"
+    "C++": "80%",
+    Javascript: "40%",
+    React: "40%",
+    AngularJs: "50%",
+    PHP: "40%",
+    Python: "40%",
+    MySQL: "30%"
   };
 
   return (
-    <div className="container-fluid">
-      <div className="row">
+    <div className="container-fluid About-skills">
+      {/* <div className="row">
         {column.map(column => (
           <h4 className="col-md-3" key={column}>
             {column}
           </h4>
         ))}
-      </div>
+      </div> */}
       {Object.keys(rows).map(skill => (
-        <div className="row" key={skill}>
+        <div className="row About-skills-row" key={skill}>
           <h4 className="col-md-3">{skill}</h4>
-          {Array.from(Array(column.indexOf(rows[skill])), (_, i) => (
+          {/* {Array.from(Array(column.indexOf(rows[skill])), (_, i) => (
             <div className="col-md-3" key={i}>
               <FiCheckSquare />
             </div>
-          ))}
+          ))} */}
+          <div className="col-md-8 col-lg-9 About-bar-border">
+            <div className="About-bar-filled" style={{ width: rows[skill] }} />
+            <p className="About-bar-percent">{rows[skill]}</p>
+          </div>
         </div>
       ))}
     </div>
