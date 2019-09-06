@@ -1,67 +1,54 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { IconContext } from "react-icons";
-import { IoIosArrowBack } from "react-icons/io";
 import "../../assets/styles/section.css";
 import "./Experience.css";
 
 function Experience(props) {
-  const mainCardTitle = "Learning A-Z";
-  const subCardTitles = [
-    "Data Analysis on Canvas",
-    "Mobile Phone Laser Tag",
-    "A Light in the Darkness",
-    "Rube Goldberg Machine"
-  ];
+  const mainCard = {
+    title: "Learning A-Z",
+    text: `Implemented a new feature that allows teachers to generate reward
+    cards and students to redeem them through QR codes to increase student
+    and teacher interaction with our products even offline.`,
+    link: "http://laz.huberthung.me"
+  };
+
+  const subCards = {
+    mDataHackI: {
+      title: "MDataHackI: Data Analysis on Canvas",
+      text: `Analyzed 300000+ lines of data to identify trends in course 
+      completion rate and presented and made suggestions to Canvas moderators.`,
+      link: "./mDataHackI"
+    },
+    mHacksXI: {
+      title: "MHacks XI: Mobile Laser Tag",
+      text: `Created a 1v1 mobile laser tag game that uses computer vision to 
+      track targets.`,
+      link: "./mHacksXI"
+    },
+    ggj2018: {
+      title: "GGJ 2018: A Light in the Darkness",
+      text: `This is a puzzle game where users use different objects to try to 
+      send the "light" to its destination.`,
+      link: "./ggj2018"
+    },
+    rubeGoldberg: {
+      title: "Technion Rube Goldberg Machine",
+      text: `Using chain reactions to show the pollutions that mankind has made 
+      to the Earth and ways each of us can do to help save the Earth!`,
+      link: "./rubeGoldberg"
+    }
+  };
 
   const { setRef } = props;
   const [overlay, setOverlay] = useState(null);
-  const [cardDetailCardTitle, setCardDetailCardTitle] = useState(null);
 
   function showOverlay(event) {
-    setOverlay(event.currentTarget.innerText);
+    const titleIndex = 0;
+    setOverlay(event.currentTarget.childNodes[titleIndex].innerText);
   }
 
   function hideOverlay() {
     setOverlay(null);
-  }
-
-  function showCardDetail(cardTitle) {
-    hideOverlay();
-    setCardDetailCardTitle(cardTitle);
-  }
-
-  function chooseCardDetail() {
-    switch (cardDetailCardTitle) {
-      case "Learning A-Z":
-        return <Laz />;
-      default:
-        return <p>NULL</p>;
-    }
-  }
-
-  function hideCardDetail() {
-    setCardDetailCardTitle(null);
-  }
-
-  if (cardDetailCardTitle !== null) {
-    return (
-      <div className="section-container" ref={ref => setRef("Experience", ref)}>
-        <div className="Experience-card-detail-title-div">
-          <IconContext.Provider value={{ color: "white", size: "3rem" }}>
-            <button type="button" onClick={hideCardDetail}>
-              <IoIosArrowBack />
-            </button>
-          </IconContext.Provider>
-          <h2 className="section-title Experience-card-detail-title">
-            {cardDetailCardTitle}
-          </h2>
-        </div>
-        <div className="section-content Experience-card-detail-content">
-          {chooseCardDetail()}
-        </div>
-      </div>
-    );
   }
 
   return (
@@ -73,22 +60,36 @@ function Experience(props) {
           onMouseEnter={showOverlay}
           onMouseLeave={hideOverlay}
         >
-          <h3 className="Experience-card-title">{mainCardTitle}</h3>
-          {overlay === mainCardTitle ? (
-            <Overlay onClick={showCardDetail} cardTitle={mainCardTitle} />
+          <h3 className="Experience-card-title">{mainCard.title}</h3>
+          <p className="Experience-card-title">{mainCard.text}</p>
+          {overlay === mainCard.title ? (
+            <div className="Experience-overlay">
+              <a
+                className="Experience-overlay-button"
+                href={mainCard.link}
+                target="blank"
+              >
+                Learn More
+              </a>
+            </div>
           ) : null}
         </div>
         <div className="Experience-sub-div">
-          {subCardTitles.map(title => (
+          {Object.values(subCards).map(card => (
             <div
-              key={title}
+              key={card.title}
               className="Experience-sub-card"
               onMouseEnter={showOverlay}
               onMouseLeave={hideOverlay}
             >
-              <h4 className="Experience-card-title">{title}</h4>
-              {overlay === title ? (
-                <Overlay onClick={showCardDetail} cardTitle={title} />
+              <h4 className="Experience-card-title">{card.title}</h4>
+              <p className="Experience-card-title">{card.text}</p>
+              {overlay === card.title ? (
+                <div className="Experience-overlay">
+                  <a className="Experience-overlay-button" href={card.link}>
+                    Learn More
+                  </a>
+                </div>
               ) : null}
             </div>
           ))}
@@ -101,41 +102,5 @@ function Experience(props) {
 Experience.propTypes = {
   setRef: PropTypes.func.isRequired
 };
-
-function Overlay(props) {
-  const { onClick, cardTitle } = props;
-
-  return (
-    <div className="Experience-overlay">
-      <button
-        className="Experience-overlay-button"
-        type="button"
-        onClick={() => onClick(cardTitle)}
-      >
-        Learn More
-      </button>
-    </div>
-  );
-}
-
-Overlay.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  cardTitle: PropTypes.string.isRequired
-};
-
-function Laz() {
-  return (
-    <>
-      <p>
-        I implemented a new feature that allows teachers to generate reward
-        cards and students to redeem them through QR codes to increase student
-        and teacher interaction with our products even offline
-      </p>
-      <button className="Experience-overlay-button" type="button">
-        View Demo
-      </button>
-    </>
-  );
-}
 
 export default Experience;
