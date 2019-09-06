@@ -40,8 +40,8 @@
   align-items: center;
 }
 
-h4 {
-  margin-bottom: 0;
+.About-skills-row > h4 {
+  margin-bottom: 0 !important;
 }
 
 .About-bar-border {
