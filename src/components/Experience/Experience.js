@@ -5,39 +5,39 @@ import "./Experience.css";
 
 function Experience(props) {
   const mainCard = {
-    title: "Learning A-Z",
+    title: "Reward Card System",
     text: `Implemented a new feature that allows teachers to generate reward
     cards and students to redeem them through QR codes to increase student
     and teacher interaction with our products even offline.`,
     link: "http://laz.huberthung.me"
   };
 
-  const subCards = {
-    mDataHackI: {
-      title: "MDataHackI: Data Analysis on Canvas",
+  const subCards = [
+    {
+      title: "Data Analysis on Canvas",
       text: `Analyzed 300000+ lines of data to identify trends in course 
-      completion rate and presented and made suggestions to Canvas moderators.`,
+      completion rate.`,
       link: "./mDataHackI"
     },
-    mHacksXI: {
-      title: "MHacks XI: Mobile Laser Tag",
+    {
+      title: "Mobile Laser Tag",
       text: `Created a 1v1 mobile laser tag game that uses computer vision to 
       track targets.`,
       link: "./mHacksXI"
     },
-    ggj2018: {
-      title: "GGJ 2018: A Light in the Darkness",
+    {
+      title: "A Light in the Darkness",
       text: `This is a puzzle game where users use different objects to try to 
       send the "light" to its destination.`,
       link: "./ggj2018"
     },
-    rubeGoldberg: {
-      title: "Technion Rube Goldberg Machine",
-      text: `Using chain reactions to show the pollutions that mankind has made 
-      to the Earth and ways each of us can do to help save the Earth!`,
+    {
+      title: "Rube Goldberg Machine",
+      text: `Show the pollutions that mankind has made to the Earth and ways 
+      each of us can do to help save the Earth!`,
       link: "./rubeGoldberg"
     }
-  };
+  ];
 
   const { setRef } = props;
   const [overlay, setOverlay] = useState(null);
@@ -75,7 +75,7 @@ function Experience(props) {
           ) : null}
         </div>
         <div className="Experience-sub-div">
-          {Object.values(subCards).map(card => (
+          {subCards.map(card => (
             <div
               key={card.title}
               className="Experience-sub-card"

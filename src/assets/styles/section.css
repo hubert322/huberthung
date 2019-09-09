@@ -10,8 +10,12 @@
 .section-title {
   width: 100%;
   font-size: 2rem;
-  color: rgb(205, 199, 188);
+  /* color: rgb(205, 199, 188); */
+  /* color: #e98007; */
+  color: white;
   text-align: left;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .section-content {

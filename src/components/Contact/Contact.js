@@ -7,8 +7,8 @@ import {
   FaInstagram,
   FaRegEnvelope
 } from "react-icons/fa";
-import "./Contact.css";
 import "../../assets/styles/section.css";
+import "./Contact.css";
 
 function Contact(props) {
   const { setRef } = props;
@@ -20,34 +20,36 @@ function Contact(props) {
   return (
     <div className="section-container" ref={ref => setRef("Contact", ref)}>
       <h2 className="section-title">Contact</h2>
-      <div className="container row flex-wrap">
+      <div className="container Contact-content">
         <h3>{contactText}</h3>
-        <IconContext.Provider value={{ size: "5em", color: "white" }}>
-          <a
-            className="Contact-link"
-            href="https://github.com/hubert322"
-            target="blank"
-          >
-            <FaGithub />
-          </a>
-          <a
-            className="Contact-link"
-            href="https://www.linkedin.com/in/tzu-fan-hubert-hung"
-            target="blank"
-          >
-            <FaLinkedin />
-          </a>
-          <a
-            className="Contact-link"
-            href="https://www.instagram.com/huberthung322"
-            target="blank"
-          >
-            <FaInstagram />
-          </a>
-          <a className="Contact-link" href="mailto:huberth@umich.edu">
-            <FaRegEnvelope />
-          </a>
-        </IconContext.Provider>
+        <div className="Contact-icons">
+          <IconContext.Provider value={{ size: "5em", color: "white" }}>
+            <a
+              className="Contact-link"
+              href="https://github.com/hubert322"
+              target="blank"
+            >
+              <FaGithub />
+            </a>
+            <a
+              className="Contact-link"
+              href="https://www.linkedin.com/in/tzu-fan-hubert-hung"
+              target="blank"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              className="Contact-link"
+              href="https://www.instagram.com/huberthung322"
+              target="blank"
+            >
+              <FaInstagram />
+            </a>
+            <a className="Contact-link" href="mailto:huberth@umich.edu">
+              <FaRegEnvelope />
+            </a>
+          </IconContext.Provider>
+        </div>
       </div>
     </div>
   );

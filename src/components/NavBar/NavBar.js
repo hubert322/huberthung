@@ -17,7 +17,7 @@ function NavBar(props) {
 
 function NavButtonList(props) {
   const { onClick } = props;
-  const navList = ["About", "Experience", "Contact", "Resume"];
+  const navList = ["About", "Experience", "Contact"];
   const [currWidth, setCurrWidth] = useState(window.innerWidth);
 
   const mediumDeviceMinWidth = 768;
@@ -64,6 +64,13 @@ function NavButtonList(props) {
           {navItem}
         </button>
       ))}
+      <a
+        className="NavBar-button NavBar-button-resume"
+        href="https://bit.ly/2lK3gUY"
+        target="blank"
+      >
+        Resume
+      </a>
     </>
   );
 }

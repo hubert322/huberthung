@@ -7,10 +7,9 @@
   position: relative;
 }
 
-.About-basic-info-image {
-  max-width: 100%;
-  max-height: 80%;
-  height: auto;
+.About-profile {
+  padding-left: 0;
+  height: 100%;
 }
 
 .About-basic-info-text {
