@@ -9,7 +9,7 @@ function Experience(props) {
     text: `Implemented a new feature that allows teachers to generate reward
     cards and students to redeem them through QR codes to increase student
     and teacher interaction with our products even offline.`,
-    link: "http://laz.huberthung.me"
+    link: "https://laz.huberthung.me"
   };
 
   const subCards = [
