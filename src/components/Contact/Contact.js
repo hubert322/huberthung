@@ -27,21 +27,24 @@ function Contact(props) {
             <a
               className="Contact-link"
               href="https://github.com/hubert322"
-              target="blank"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FaGithub />
             </a>
             <a
               className="Contact-link"
               href="https://www.linkedin.com/in/tzu-fan-hubert-hung"
-              target="blank"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FaLinkedin />
             </a>
             <a
               className="Contact-link"
               href="https://www.instagram.com/huberthung322"
-              target="blank"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FaInstagram />
             </a>

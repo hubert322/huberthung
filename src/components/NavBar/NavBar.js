@@ -66,8 +66,9 @@ function NavButtonList(props) {
       ))}
       <a
         className="NavBar-button NavBar-button-resume"
-        href="https://bit.ly/2lK3gUY"
-        target="blank"
+        href="https://bit.ly/hubert-resume"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         Resume
       </a>

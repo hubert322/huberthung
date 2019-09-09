@@ -1,3 +1,3 @@
 # Personal Website
-## Live at: <a href="https://huberthung.me" target="blank">huberthung.me</a>
+## Live at: [huberthung.me](https://huberthung.me)
 ## This project is created using React
