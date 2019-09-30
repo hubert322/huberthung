@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import ScrollAnimation from "react-animate-on-scroll";
 import Arrow from "../Arrow/Arrow";
-import "animate.css/animate.min.css";
 import "./Home.css";
 
 function Home(props) {

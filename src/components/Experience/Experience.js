@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import ScrollAnimation from "react-animate-on-scroll";
 import "../../assets/styles/section.css";
 import "./Experience.css";
 
@@ -14,6 +15,12 @@ function Experience(props) {
   };
 
   const subCards = [
+    {
+      title: "PWA Example",
+      text: `Progressive Web App Demo!`,
+      link: "https://github.com/hubert322/pwa-example",
+      target: "_blank"
+    },
     {
       title: "Blast Beat",
       text: `Generate music from text files!!!`,
@@ -33,14 +40,14 @@ function Experience(props) {
       track targets.`,
       link: "https://bit.ly/mobile-laser-tag",
       target: "_blank"
-    },
-    {
-      title: "A Light in the Darkness",
-      text: `This is a puzzle game where users use different objects to try to 
-      send the "light" to its destination.`,
-      link: "https://globalgamejam.org/2018/games/light-darkness-黑暗中的光芒",
-      target: "_blank"
     }
+    // {
+    //   title: "A Light in the Darkness",
+    //   text: `This is a puzzle game where users use different objects to try to
+    //   send the "light" to its destination.`,
+    //   link: "https://globalgamejam.org/2018/games/light-darkness-黑暗中的光芒",
+    //   target: "_blank"
+    // }
     // {
     //   title: "Rube Goldberg Machine",
     //   text: `Show the pollutions that mankind has made to the Earth and ways
@@ -63,56 +70,59 @@ function Experience(props) {
   }
 
   return (
-    <div className="section-container" ref={ref => setRef("Experience", ref)}>
-      <h2 className="section-title">Experience</h2>
-      <div className="section-content">
-        <div
-          className="Experience-main-card"
-          onMouseEnter={showOverlay}
-          onMouseLeave={hideOverlay}
-        >
-          <h3 className="Experience-card-title">{mainCard.title}</h3>
-          <p className="Experience-card-title">{mainCard.text}</p>
-          {overlay === mainCard.title ? (
-            <div className="Experience-overlay">
-              <a
-                className="Experience-overlay-button"
-                href={mainCard.link}
-                target={mainCard.target}
-                rel="noopener noreferrer"
+    <>
+      <div ref={ref => setRef("Experience", ref)} />
+      <ScrollAnimation className="section-container" animateIn="fadeIn">
+        <h2 className="section-title">Experience</h2>
+        <div className="section-content">
+          <div
+            className="Experience-main-card"
+            onMouseEnter={showOverlay}
+            onMouseLeave={hideOverlay}
+          >
+            <h3 className="Experience-card-title">{mainCard.title}</h3>
+            <p className="Experience-card-title">{mainCard.text}</p>
+            {overlay === mainCard.title ? (
+              <div className="Experience-overlay">
+                <a
+                  className="Experience-overlay-button"
+                  href={mainCard.link}
+                  target={mainCard.target}
+                  rel="noopener noreferrer"
+                >
+                  Learn More
+                </a>
+              </div>
+            ) : null}
+          </div>
+          <div className="Experience-sub-div">
+            {subCards.map(card => (
+              <div
+                key={card.title}
+                className="Experience-sub-card"
+                onMouseEnter={showOverlay}
+                onMouseLeave={hideOverlay}
               >
-                Learn More
-              </a>
-            </div>
-          ) : null}
+                <h4 className="Experience-card-title">{card.title}</h4>
+                <p className="Experience-card-title">{card.text}</p>
+                {overlay === card.title ? (
+                  <div className="Experience-overlay">
+                    <a
+                      className="Experience-overlay-button"
+                      href={card.link}
+                      target={card.target}
+                      rel="noopener noreferrer"
+                    >
+                      Learn More
+                    </a>
+                  </div>
+                ) : null}
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="Experience-sub-div">
-          {subCards.map(card => (
-            <div
-              key={card.title}
-              className="Experience-sub-card"
-              onMouseEnter={showOverlay}
-              onMouseLeave={hideOverlay}
-            >
-              <h4 className="Experience-card-title">{card.title}</h4>
-              <p className="Experience-card-title">{card.text}</p>
-              {overlay === card.title ? (
-                <div className="Experience-overlay">
-                  <a
-                    className="Experience-overlay-button"
-                    href={card.link}
-                    target={card.target}
-                    rel="noopener noreferrer"
-                  >
-                    Learn More
-                  </a>
-                </div>
-              ) : null}
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
+      </ScrollAnimation>
+    </>
   );
 }
 

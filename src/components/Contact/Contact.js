@@ -7,6 +7,7 @@ import {
   FaInstagram,
   FaRegEnvelope
 } from "react-icons/fa";
+import ScrollAnimation from "react-animate-on-scroll";
 import "../../assets/styles/section.css";
 import "./Contact.css";
 
@@ -18,43 +19,46 @@ function Contact(props) {
   `;
 
   return (
-    <div className="section-container" ref={ref => setRef("Contact", ref)}>
-      <h2 className="section-title">Contact</h2>
-      <div className="container Contact-content">
-        <h3>{contactText}</h3>
-        <div className="Contact-icons">
-          <IconContext.Provider value={{ size: "5em", color: "white" }}>
-            <a
-              className="Contact-link"
-              href="https://github.com/hubert322"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub />
-            </a>
-            <a
-              className="Contact-link"
-              href="https://www.linkedin.com/in/tzu-fan-hubert-hung"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              className="Contact-link"
-              href="https://www.instagram.com/huberthung322"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaInstagram />
-            </a>
-            <a className="Contact-link" href="mailto:huberth@umich.edu">
-              <FaRegEnvelope />
-            </a>
-          </IconContext.Provider>
+    <>
+      <div ref={ref => setRef("Contact", ref)} />
+      <ScrollAnimation className="section-container" animateIn="fadeIn">
+        <h2 className="section-title">Contact</h2>
+        <div className="container Contact-content">
+          <h3>{contactText}</h3>
+          <div className="Contact-icons">
+            <IconContext.Provider value={{ size: "5em", color: "white" }}>
+              <a
+                className="Contact-link"
+                href="https://github.com/hubert322"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub />
+              </a>
+              <a
+                className="Contact-link"
+                href="https://www.linkedin.com/in/tzu-fan-hubert-hung"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin />
+              </a>
+              <a
+                className="Contact-link"
+                href="https://www.instagram.com/huberthung322"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram />
+              </a>
+              <a className="Contact-link" href="mailto:huberth@umich.edu">
+                <FaRegEnvelope />
+              </a>
+            </IconContext.Provider>
+          </div>
         </div>
-      </div>
-    </div>
+      </ScrollAnimation>
+    </>
   );
 }
 
