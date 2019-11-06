@@ -1,20 +1,38 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import ScrollAnimation from "react-animate-on-scroll";
+import lazLogo from "../../assets/images/laz.png";
 import "../../assets/styles/section.css";
 import "./Experience.css";
 
 function Experience(props) {
-  const mainCard = {
-    title: "Reward Card System",
-    text: `Implemented a new feature that allows teachers to generate reward
-    cards and students to redeem them through QR codes to increase student
-    and teacher interaction with our products even offline.`,
-    link: "https://laz.huberthung.me",
-    target: "_blank"
-  };
+  // const mainCard = {
+  //   title: "Reward Card System",
+  //   text: `Implemented a new feature that allows teachers to generate reward
+  //   cards and students to redeem them through QR codes to increase student
+  //   and teacher interaction with our products even offline.`,
+  //   link: "https://laz.huberthung.me",
+  //   target: "_blank"
+  // };
 
   const subCards = [
+    {
+      title: "Reward Card System",
+      text: `Implemented a new feature that allows teachers to generate reward
+      cards and students to redeem them through QR codes to increase student
+      and teacher interaction with our products even offline.`,
+      src: lazLogo,
+      alt: "Learning A-Z Robot Logo",
+      link: "https://laz.huberthung.me",
+      target: "_blank"
+    },
+    {
+      title: "EngageMe",
+      text: `A Chrome extension that displays the most popular segments of 
+      videos by tracking users’ video-watching activity through crowdsourcing`,
+      link: "https://github.com/rguan72/EngageMe-be",
+      target: "_blank"
+    },
     {
       title: "PWA Example",
       text: `Progressive Web App Demo!`,
@@ -75,26 +93,6 @@ function Experience(props) {
       <ScrollAnimation className="section-container" animateIn="fadeIn">
         <h2 className="section-title">Experience</h2>
         <div className="section-content">
-          <div
-            className="Experience-main-card"
-            onMouseEnter={showOverlay}
-            onMouseLeave={hideOverlay}
-          >
-            <h3 className="Experience-card-title">{mainCard.title}</h3>
-            <p className="Experience-card-title">{mainCard.text}</p>
-            {overlay === mainCard.title ? (
-              <div className="Experience-overlay">
-                <a
-                  className="Experience-overlay-button"
-                  href={mainCard.link}
-                  target={mainCard.target}
-                  rel="noopener noreferrer"
-                >
-                  Learn More
-                </a>
-              </div>
-            ) : null}
-          </div>
           <div className="Experience-sub-div">
             {subCards.map(card => (
               <div
@@ -105,6 +103,7 @@ function Experience(props) {
               >
                 <h4 className="Experience-card-title">{card.title}</h4>
                 <p className="Experience-card-title">{card.text}</p>
+                {/* <img src={card.src} alt={card.alt} className="img-fluid" /> */}
                 {overlay === card.title ? (
                   <div className="Experience-overlay">
                     <a
@@ -124,6 +123,62 @@ function Experience(props) {
       </ScrollAnimation>
     </>
   );
+
+  // return (
+  //   <>
+  //     <div ref={ref => setRef("Experience", ref)} />
+  //     <ScrollAnimation className="section-container" animateIn="fadeIn">
+  //       <h2 className="section-title">Experience</h2>
+  //       <div className="section-content">
+  //         <div
+  //           className="Experience-main-card"
+  //           onMouseEnter={showOverlay}
+  //           onMouseLeave={hideOverlay}
+  //         >
+  //           <h3 className="Experience-card-title">{mainCard.title}</h3>
+  //           <p className="Experience-card-title">{mainCard.text}</p>
+  //           {overlay === mainCard.title ? (
+  //             <div className="Experience-overlay">
+  //               <a
+  //                 className="Experience-overlay-button"
+  //                 href={mainCard.link}
+  //                 target={mainCard.target}
+  //                 rel="noopener noreferrer"
+  //               >
+  //                 Learn More
+  //               </a>
+  //             </div>
+  //           ) : null}
+  //         </div>
+  //         <div className="Experience-sub-div">
+  //           {subCards.map(card => (
+  //             <div
+  //               key={card.title}
+  //               className="Experience-sub-card"
+  //               onMouseEnter={showOverlay}
+  //               onMouseLeave={hideOverlay}
+  //             >
+  //               <h4 className="Experience-card-title">{card.title}</h4>
+  //               <p className="Experience-card-title">{card.text}</p>
+  //               {overlay === card.title ? (
+  //                 <div className="Experience-overlay">
+  //                   <a
+  //                     className="Experience-overlay-button"
+  //                     href={card.link}
+  //                     target={card.target}
+  //                     rel="noopener noreferrer"
+  //                   >
+  //                     Learn More
+  //                   </a>
+  //                 </div>
+  //               ) : null}
+  //             </div>
+  //           ))}
+  //         </div>
+  //       </div>
+  //     </ScrollAnimation>
+  //   </>
+  // );
 }
 
 Experience.propTypes = {
