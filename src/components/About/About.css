@@ -1,23 +1,11 @@
-.About-basic-info {
-  height: 100%;
-  display: inline-block;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  position: relative;
-}
-
 .About-profile {
   padding-left: 0;
   height: 100%;
 }
 
-.About-basic-info-text {
+.About-profile-name {
   color: white;
   text-align: center;
-  /* font-size: 1rem;
-  line-height: 1rem; */
-  /* position: absolute; */
 }
 
 .About-seperator {

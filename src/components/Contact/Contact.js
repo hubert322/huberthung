@@ -23,8 +23,8 @@ function Contact(props) {
       <div ref={ref => setRef("Contact", ref)} />
       <ScrollAnimation className="section-container" animateIn="fadeIn">
         <h2 className="section-title">Contact</h2>
-        <div className="container Contact-content">
-          <h3>{contactText}</h3>
+        <div className="section-content Contact-content">
+          <h3 className="Contact-text">{contactText}</h3>
           <div className="Contact-icons">
             <IconContext.Provider value={{ size: "5em", color: "white" }}>
               <a

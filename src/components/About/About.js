@@ -5,10 +5,6 @@ import profilePic from "../../assets/images/profile.jpg";
 import "./About.css";
 
 function About(props) {
-  const basicInfoTextContent = `
-    Hubert Tzu-Fan Hung
-  `;
-
   const { setRef } = props;
 
   return (
@@ -25,10 +21,10 @@ function About(props) {
               style={{ animationDelay: "0.2s" }}
             />
             <h3
-              className="About-basic-info-text animated fadeIn"
+              className="About-profile-name animated fadeIn"
               style={{ animationDelay: "0.4s" }}
             >
-              {basicInfoTextContent}
+              Hubert Tzu-Fan Hung
             </h3>
           </div>
           <div className="col-md-8">
