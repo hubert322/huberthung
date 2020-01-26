@@ -49,6 +49,18 @@
 }
 
 @media (max-width: 767.98px) {
+  .NavBar {
+    height: 7vh;
+  }
+  .NavBar-content {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .NavBar {
+    height: 7vh;
+  }
   .NavBar-content {
     justify-content: flex-start;
   }

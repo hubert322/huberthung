@@ -35,7 +35,7 @@ function About(props) {
               Computer Science Engineering
             </h3>
             <h3 className="animated fadeIn" style={{ animationDelay: "0.2s" }}>
-              GPA: 3.83
+              GPA: 3.69
             </h3>
             <div className="About-seperator" />
             <h3 className="animated fadeIn" style={{ animationDelay: "0.3s" }}>
