@@ -24,6 +24,7 @@ function Experience(props) {
   const subCards = [
     {
       title: "Reward Card System",
+      ribbon: "Internship",
       text: `Implemented a new feature that allows teachers to generate reward
       cards and students to redeem them through QR codes to increase student
       and teacher interaction with our products even offline.`,
@@ -34,6 +35,7 @@ function Experience(props) {
     {
       title: "EngageMe",
       src: engageMe,
+      ribbon: "MHacks XII",
       text: `A Chrome extension that displays the most popular segments of 
       videos by tracking users’ video-watching activity through crowdsourcing`,
       link: "https://github.com/rguan72/EngageMe-be",
@@ -56,6 +58,7 @@ function Experience(props) {
     {
       title: "Data Analysis on Canvas",
       src: canvas,
+      ribbon: "MDataHack I",
       text: `Analyzed 300000+ lines of data to identify trends in course 
       completion rate.`,
       link: "https://bit.ly/data-canvas",
@@ -64,6 +67,7 @@ function Experience(props) {
     {
       title: "Mobile Laser Tag",
       src: laserTag,
+      ribbon: "MHacks XI",
       text: `Created a 1v1 mobile laser tag game that uses computer vision to 
       track targets.`,
       link: "https://bit.ly/mobile-laser-tag",
@@ -72,6 +76,7 @@ function Experience(props) {
     {
       title: "A Light in the Darkness",
       src: lightDarkness,
+      ribbon: "GGJ 2018",
       size: "cover",
       text: `This is a puzzle game where users use different objects to try to
       send the "light" to its destination.`,
@@ -93,8 +98,14 @@ function Experience(props) {
   const [overlay, setOverlay] = useState(null);
 
   function showOverlay(event) {
-    const titleIndex = 0;
-    setOverlay(event.currentTarget.childNodes[titleIndex].innerText);
+    const contentIndex = 0;
+    let childNodes = event.currentTarget.childNodes[contentIndex].childNodes;
+    for (const node of childNodes) {
+      if (node.className == "Experience-card-title") {
+        setOverlay(node.innerText);
+        return;
+      }
+    }
   }
 
   function hideOverlay() {
@@ -127,6 +138,10 @@ function Experience(props) {
                     backgroundSize: card.size ? card.size : "contain"
                   }}
                 >
+                  {card.ribbon ? (
+                    <div className="Experience-ribbon">{card.ribbon}</div>
+                  ) : null}
+
                   {overlay === card.title ? (
                     <div className="Experience-overlay">
                       <h4 className="Experience-card-title">{card.title}</h4>
