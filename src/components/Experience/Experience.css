@@ -159,3 +159,15 @@
 .Experience-empty {
   flex-grow: 0.75;
 }
+
+@media (max-width: 767.98px) {
+  .Experience-sub-div {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .Experience-sub-card {
+    width: 100%;
+  }
+}

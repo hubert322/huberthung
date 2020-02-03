@@ -30,6 +30,20 @@
   margin-right: auto;
 }
 
+.NavBar-dropdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  /* position: relative; */
+}
+
+.NavBar-dropdown-content {
+  position: relative;
+  background-color: black;
+  z-index: 200;
+}
+
 .NavBar-button-resume {
   border:2px solid #7df9ff;
   border-radius: 3px;
@@ -53,15 +67,12 @@
     height: 7vh;
   }
   .NavBar-content {
-    justify-content: flex-start;
+    justify-content: center;
   }
-}
-
-@media (max-width: 767.98px) {
-  .NavBar {
-    height: 7vh;
+  .NavBar-button-home {
+    margin-right: 0;
   }
-  .NavBar-content {
-    justify-content: flex-start;
+  .NavBar-button {
+    font-size: 0.8em;
   }
 }

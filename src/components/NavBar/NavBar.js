@@ -19,8 +19,13 @@ function NavButtonList(props) {
   const { onClick } = props;
   const navList = ["About", "Experience", "Contact"];
   const [currWidth, setCurrWidth] = useState(window.innerWidth);
+  const [clickedDropdown, setClickDropdown] = useState(false);
 
   const mediumDeviceMinWidth = 768;
+
+  function changeDropdown() {
+    setClickDropdown(!clickedDropdown);
+  }
 
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -28,22 +33,27 @@ function NavButtonList(props) {
     });
   });
 
-  if (currWidth < mediumDeviceMinWidth) {
-    return (
-      <>
-        <IconContext.Provider value={{ className: "NavBar-button" }}>
-          <button type="button" onClick={() => onClick("Home")}>
-            <IoIosMenu />
-          </button>
-        </IconContext.Provider>
-        <IconContext.Provider value={{ className: "NavBar-button" }}>
-          <button type="button" onClick={() => onClick("Home")}>
-            <IoMdHome />
-          </button>
-        </IconContext.Provider>
-      </>
-    );
-  }
+  // if (currWidth < mediumDeviceMinWidth) {
+  //   return (
+  //     <>
+  //       <div className="NavBar-dropdown">
+  //         <IconContext.Provider value={{ className: "NavBar-button" }}>
+  //           <button type="button" onClick={changeDropdown}>
+  //             <IoIosMenu />
+  //           </button>
+  //         </IconContext.Provider>
+  //         {clickedDropdown ? (
+  //           <div className="NavBar-dropdown-content">LMZD</div>
+  //         ) : null}
+  //       </div>
+  //       <IconContext.Provider value={{ className: "NavBar-button" }}>
+  //         <button type="button" onClick={() => onClick("Home")}>
+  //           <IoMdHome />
+  //         </button>
+  //       </IconContext.Provider>
+  //     </>
+  //   );
+  // }
 
   return (
     <>

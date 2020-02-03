@@ -12,15 +12,6 @@ import "../../assets/styles/section.css";
 import "./Experience.css";
 
 function Experience(props) {
-  // const mainCard = {
-  //   title: "Reward Card System",
-  //   text: `Implemented a new feature that allows teachers to generate reward
-  //   cards and students to redeem them through QR codes to increase student
-  //   and teacher interaction with our products even offline.`,
-  //   link: "https://laz.huberthung.me",
-  //   target: "_blank"
-  // };
-
   const subCards = [
     {
       title: "Reward Card System",

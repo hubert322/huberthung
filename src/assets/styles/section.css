@@ -28,3 +28,16 @@
   margin-bottom: 5vh;
   color: white;
 }
+
+
+@media (max-width: 767.98px) {
+  .section-container {
+    height: auto;
+  }
+  .section-title {
+    text-align: center;
+  }
+  .section-content {
+    flex-direction: column;
+  }
+}

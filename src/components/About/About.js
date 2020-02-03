@@ -13,7 +13,7 @@ function About(props) {
       <ScrollAnimation className="section-container" animateIn="fadeIn">
         <h2 className="section-title animated fadeIn">About</h2>
         <div className="section-content">
-          <div className="col-4 About-profile">
+          <div className="col-md-4 About-profile">
             <img
               src={profilePic}
               alt="Profile Pic"
@@ -27,7 +27,7 @@ function About(props) {
               Hubert Tzu-Fan Hung
             </h3>
           </div>
-          <div className="col-md-8">
+          <div className="About-info col-md-8">
             <h3 className="animated fadeIn">
               University of Michigan, Ann Arbor
             </h3>

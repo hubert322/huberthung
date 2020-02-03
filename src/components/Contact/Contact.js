@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { IconContext } from "react-icons";
 import {
@@ -13,10 +13,19 @@ import "./Contact.css";
 
 function Contact(props) {
   const { setRef } = props;
+  const [currWidth, setCurrWidth] = useState(window.innerWidth);
   const contactText = `I am currently looking for an internship for summer 2020. 
     Whether if you just want to chat about technology, want to know me better, 
     or provide me with an opportunity, feel free to contact me via:
   `;
+
+  const mediumDeviceMinWidth = 768;
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setCurrWidth(window.innerWidth);
+    });
+  });
 
   return (
     <>
@@ -26,7 +35,12 @@ function Contact(props) {
         <div className="section-content Contact-content">
           <h3 className="Contact-text">{contactText}</h3>
           <div className="Contact-icons">
-            <IconContext.Provider value={{ size: "5em", color: "white" }}>
+            <IconContext.Provider
+              value={{
+                size: currWidth >= mediumDeviceMinWidth ? "5em" : "3em",
+                color: "white"
+              }}
+            >
               <a
                 className="Contact-link"
                 href="https://github.com/hubert322"

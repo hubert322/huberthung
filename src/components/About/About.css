@@ -50,3 +50,18 @@
   margin: 0;
   margin-left: auto;
 }
+
+@media (max-width: 767.98px) {
+  .About-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .About-info > h3 {
+    font-size: 1em;
+  }
+  .About-skills-row > h4 {
+    font-size: 1em;
+  }
+}

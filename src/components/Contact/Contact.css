@@ -19,3 +19,10 @@
 .Contact-link {
   margin: 5px;
 }
+
+@media (max-width: 767.98px) {
+  .Contact-text {
+    font-size: 1em;
+    text-align: center;
+  }
+}
