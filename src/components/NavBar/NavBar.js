@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { IconContext } from "react-icons";
-import { IoIosMenu, IoMdHome } from "react-icons/io";
+import React from "react";
 import "./NavBar.css";
 import PropTypes from "prop-types";
 
@@ -18,42 +16,6 @@ function NavBar(props) {
 function NavButtonList(props) {
   const { onClick } = props;
   const navList = ["About", "Experience", "Contact"];
-  const [currWidth, setCurrWidth] = useState(window.innerWidth);
-  const [clickedDropdown, setClickDropdown] = useState(false);
-
-  const mediumDeviceMinWidth = 768;
-
-  function changeDropdown() {
-    setClickDropdown(!clickedDropdown);
-  }
-
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      setCurrWidth(window.innerWidth);
-    });
-  });
-
-  // if (currWidth < mediumDeviceMinWidth) {
-  //   return (
-  //     <>
-  //       <div className="NavBar-dropdown">
-  //         <IconContext.Provider value={{ className: "NavBar-button" }}>
-  //           <button type="button" onClick={changeDropdown}>
-  //             <IoIosMenu />
-  //           </button>
-  //         </IconContext.Provider>
-  //         {clickedDropdown ? (
-  //           <div className="NavBar-dropdown-content">LMZD</div>
-  //         ) : null}
-  //       </div>
-  //       <IconContext.Provider value={{ className: "NavBar-button" }}>
-  //         <button type="button" onClick={() => onClick("Home")}>
-  //           <IoMdHome />
-  //         </button>
-  //       </IconContext.Provider>
-  //     </>
-  //   );
-  // }
 
   return (
     <>

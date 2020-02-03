@@ -92,7 +92,7 @@ function Experience(props) {
     const contentIndex = 0;
     let childNodes = event.currentTarget.childNodes[contentIndex].childNodes;
     for (const node of childNodes) {
-      if (node.className == "Experience-card-title") {
+      if (node.className === "Experience-card-title") {
         setOverlay(node.innerText);
         return;
       }

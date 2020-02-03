@@ -1,18 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "animate.css/animate.min.css";
 import App from "./components/App/App";
 import * as serviceWorker from "./serviceWorker";
-
-// ReactDOM.render(
-//   <BrowserRouter basename="/">
-//     <App />
-//   </BrowserRouter>,
-//   document.getElementById("root")
-// );
 
 ReactDOM.render(<App />, document.getElementById("root"));
 
