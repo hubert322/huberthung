@@ -1,3 +1,7 @@
+.About-content {
+  align-items: flex-start !important;
+}
+
 .About-profile {
   padding-left: 0;
   height: 100%;
@@ -6,6 +10,10 @@
 .About-profile-name {
   color: white;
   text-align: center;
+}
+
+.About-info > h3 {
+  font-size: 4vh;
 }
 
 .About-seperator {
@@ -25,10 +33,12 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1vh;
 }
 
 .About-skills-row > h4 {
   margin-bottom: 0 !important;
+  font-size: 3vh;
 }
 
 .About-bar-border {

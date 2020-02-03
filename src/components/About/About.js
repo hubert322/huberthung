@@ -12,7 +12,7 @@ function About(props) {
       <div ref={ref => setRef("About", ref)} />
       <ScrollAnimation className="section-container" animateIn="fadeIn">
         <h2 className="section-title animated fadeIn">About</h2>
-        <div className="section-content">
+        <div className="section-content About-content">
           <div className="col-md-4 About-profile">
             <img
               src={profilePic}
@@ -61,7 +61,9 @@ function SkillTable() {
     Javascript: "50%",
     PHP: "40%",
     React: "40%",
-    MySQL: "30%"
+    MySQL: "30%",
+    Flask: "20%",
+    Git: "20%"
   };
 
   return (
