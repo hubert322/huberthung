@@ -56,7 +56,7 @@ About.propTypes = {
 function SkillTable() {
   const rows = {
     "C++": "80%",
-    Python: "60%",
+    Python: "70%",
     AngularJs: "50%",
     Javascript: "50%",
     PHP: "40%",
