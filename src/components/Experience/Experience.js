@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import ScrollAnimation from "react-animate-on-scroll";
+import pictionary from "../../assets/images/pictionary.png";
 import lazLogo from "../../assets/images/laz.png";
 import engageMe from "../../assets/images/engage-me.png";
 import pwa from "../../assets/images/pwa.png";
@@ -14,14 +15,30 @@ import "./Experience.css";
 function Experience(props) {
   const subCards = [
     {
+      title: "License Plate Detection Management/Control System",
+      ribbon: "Internship",
+      text: `Developing a management/control system for the license plate 
+      detection system used in the office’s building parking lot to allow admins
+      to specify various access controls for different groups`,
+    },
+    {
+      title: "Pictionary Live",
+      ribbon: "Personal",
+      text: `An online, multiplayer version of pictionary!`,
+      src: pictionary,
+      size: "100% 100%",
+      link: "https://laz.huberthung.me",
+      target: "_blank",
+    },
+    {
       title: "Reward Card System",
       ribbon: "Internship",
       text: `Implemented a new feature that allows teachers to generate reward
       cards and students to redeem them through QR codes to increase student
       and teacher interaction with our products even offline.`,
       src: lazLogo,
-      link: "https://laz.huberthung.me",
-      target: "_blank"
+      link: "https://pictionary.live",
+      target: "_blank",
     },
     {
       title: "EngageMe",
@@ -30,21 +47,21 @@ function Experience(props) {
       text: `A Chrome extension that displays the most popular segments of 
       videos by tracking users’ video-watching activity through crowdsourcing`,
       link: "https://github.com/rguan72/EngageMe-be",
-      target: "_blank"
+      target: "_blank",
     },
     {
       title: "PWA Example",
       src: pwa,
       text: `Progressive Web App Demo!`,
       link: "https://github.com/hubert322/pwa-example",
-      target: "_blank"
+      target: "_blank",
     },
     {
       title: "Blast Beat",
       src: null,
       text: `Generate music from text files!!!`,
       link: "https://github.com/bowman3002/BlastBeatPy",
-      target: "_blank"
+      target: "_blank",
     },
     {
       title: "Data Analysis on Canvas",
@@ -53,7 +70,7 @@ function Experience(props) {
       text: `Analyzed 300000+ lines of data to identify trends in course 
       completion rate.`,
       link: "https://bit.ly/data-canvas",
-      target: "_blank"
+      target: "_blank",
     },
     {
       title: "Mobile Laser Tag",
@@ -62,7 +79,7 @@ function Experience(props) {
       text: `Created a 1v1 mobile laser tag game that uses computer vision to 
       track targets.`,
       link: "https://bit.ly/mobile-laser-tag",
-      target: "_blank"
+      target: "_blank",
     },
     {
       title: "A Light in the Darkness",
@@ -72,7 +89,7 @@ function Experience(props) {
       text: `This is a puzzle game where users use different objects to try to
       send the "light" to its destination.`,
       link: "https://globalgamejam.org/2018/games/light-darkness-黑暗中的光芒",
-      target: "_blank"
+      target: "_blank",
     },
     {
       title: "Rube Goldberg Machine",
@@ -81,8 +98,8 @@ function Experience(props) {
       text: `Show the pollutions that mankind has made to the Earth and ways
       each of us can do to help save the Earth!`,
       link: "./rubeGoldberg",
-      target: "_self"
-    }
+      target: "_self",
+    },
   ];
 
   const { setRef } = props;
@@ -105,7 +122,7 @@ function Experience(props) {
 
   return (
     <>
-      <div ref={ref => setRef("Experience", ref)} />
+      <div ref={(ref) => setRef("Experience", ref)} />
       <ScrollAnimation
         className="section-container Experience-container"
         animateIn="fadeIn"
@@ -113,7 +130,7 @@ function Experience(props) {
         <h2 className="section-title">Experience</h2>
         <div className="section-content">
           <div className="Experience-sub-div">
-            {subCards.map(card => (
+            {subCards.map((card) => (
               <div
                 key={card.title}
                 className="Experience-sub-card"
@@ -126,7 +143,7 @@ function Experience(props) {
                     backgroundImage: `url(${card.src})`,
                     backgroundPosition: card.pos ? card.pos : "center",
                     backgroundRepeat: "no-repeat",
-                    backgroundSize: card.size ? card.size : "contain"
+                    backgroundSize: card.size ? card.size : "contain",
                   }}
                 >
                   {card.ribbon ? (
@@ -137,14 +154,16 @@ function Experience(props) {
                     <div className="Experience-overlay">
                       <h4 className="Experience-card-title">{card.title}</h4>
                       <p className="Experience-card-title">{card.text}</p>
-                      <a
-                        className="Experience-overlay-button"
-                        href={card.link}
-                        target={card.target}
-                        rel="noopener noreferrer"
-                      >
-                        Learn More
-                      </a>
+                      {card.link ? (
+                        <a
+                          className="Experience-overlay-button"
+                          href={card.link}
+                          target={card.target}
+                          rel="noopener noreferrer"
+                        >
+                          Learn More
+                        </a>
+                      ) : null}
                     </div>
                   ) : (
                     <h4
@@ -166,7 +185,7 @@ function Experience(props) {
 }
 
 Experience.propTypes = {
-  setRef: PropTypes.func.isRequired
+  setRef: PropTypes.func.isRequired,
 };
 
 export default Experience;

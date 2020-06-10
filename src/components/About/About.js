@@ -9,7 +9,7 @@ function About(props) {
 
   return (
     <>
-      <div ref={ref => setRef("About", ref)} />
+      <div ref={(ref) => setRef("About", ref)} />
       <ScrollAnimation className="section-container" animateIn="fadeIn">
         <h2 className="section-title animated fadeIn">About</h2>
         <div className="section-content About-content">
@@ -35,7 +35,7 @@ function About(props) {
               Computer Science Engineering
             </h3>
             <h3 className="animated fadeIn" style={{ animationDelay: "0.2s" }}>
-              GPA: 3.69
+              GPA: 3.70
             </h3>
             <div className="About-seperator" />
             <h3 className="animated fadeIn" style={{ animationDelay: "0.3s" }}>
@@ -50,20 +50,20 @@ function About(props) {
 }
 
 About.propTypes = {
-  setRef: PropTypes.func.isRequired
+  setRef: PropTypes.func.isRequired,
 };
 
 function SkillTable() {
   const rows = {
     "C++": "80%",
     Python: "70%",
+    React: "60%",
     AngularJs: "50%",
     Javascript: "50%",
+    Flask: "40%",
     PHP: "40%",
-    React: "40%",
     MySQL: "30%",
-    Flask: "20%",
-    Git: "20%"
+    Git: "20%",
   };
 
   return (
