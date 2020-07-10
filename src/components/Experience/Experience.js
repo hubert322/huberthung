@@ -27,7 +27,7 @@ function Experience(props) {
       text: `An online, multiplayer version of pictionary!`,
       src: pictionary,
       size: "100% 100%",
-      link: "https://laz.huberthung.me",
+      link: "https://pictionary.live",
       target: "_blank",
     },
     {
@@ -37,7 +37,7 @@ function Experience(props) {
       cards and students to redeem them through QR codes to increase student
       and teacher interaction with our products even offline.`,
       src: lazLogo,
-      link: "https://pictionary.live",
+      link: "https://laz.huberthung.me",
       target: "_blank",
     },
     {
