@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import ScrollAnimation from "react-animate-on-scroll";
+import trendMicro from "../../assets/images/trend-micro.png";
 import pictionary from "../../assets/images/pictionary.png";
 import lazLogo from "../../assets/images/laz.png";
 import engageMe from "../../assets/images/engage-me.png";
@@ -15,11 +16,18 @@ import "./Experience.css";
 function Experience(props) {
   const subCards = [
     {
+      title: "UI BVT Automation",
+      ribbon: "Internship",
+      text: `Implemented a pipeline that can control Windows computers to open downloaded files via Ansible and Jenkins, broadening automated testing’s capabilities.
+      Designed a new BVT UI test case for a new UI interface, from mindmap, to test case review, to implementation via WebdriverIO.`,
+      src: trendMicro
+    },
+    {
       title: "License Plate Detection Management/Control System",
       ribbon: "Internship",
       text: `Developing a management/control system for the license plate 
       detection system used in the office’s building parking lot to allow admins
-      to specify various access controls for different groups`,
+      to specify various access controls for different groups`
     },
     {
       title: "Pictionary Live",
@@ -28,7 +36,7 @@ function Experience(props) {
       src: pictionary,
       size: "100% 100%",
       link: "https://pictionary.live",
-      target: "_blank",
+      target: "_blank"
     },
     {
       title: "Reward Card System",
@@ -38,7 +46,7 @@ function Experience(props) {
       and teacher interaction with our products even offline.`,
       src: lazLogo,
       link: "https://laz.huberthung.me",
-      target: "_blank",
+      target: "_blank"
     },
     {
       title: "EngageMe",
@@ -47,21 +55,21 @@ function Experience(props) {
       text: `A Chrome extension that displays the most popular segments of 
       videos by tracking users’ video-watching activity through crowdsourcing`,
       link: "https://github.com/rguan72/EngageMe-be",
-      target: "_blank",
+      target: "_blank"
     },
     {
       title: "PWA Example",
       src: pwa,
       text: `Progressive Web App Demo!`,
       link: "https://github.com/hubert322/pwa-example",
-      target: "_blank",
+      target: "_blank"
     },
     {
       title: "Blast Beat",
       src: null,
       text: `Generate music from text files!!!`,
       link: "https://github.com/bowman3002/BlastBeatPy",
-      target: "_blank",
+      target: "_blank"
     },
     {
       title: "Data Analysis on Canvas",
@@ -70,7 +78,7 @@ function Experience(props) {
       text: `Analyzed 300000+ lines of data to identify trends in course 
       completion rate.`,
       link: "https://bit.ly/data-canvas",
-      target: "_blank",
+      target: "_blank"
     },
     {
       title: "Mobile Laser Tag",
@@ -79,7 +87,7 @@ function Experience(props) {
       text: `Created a 1v1 mobile laser tag game that uses computer vision to 
       track targets.`,
       link: "https://bit.ly/mobile-laser-tag",
-      target: "_blank",
+      target: "_blank"
     },
     {
       title: "A Light in the Darkness",
@@ -89,7 +97,7 @@ function Experience(props) {
       text: `This is a puzzle game where users use different objects to try to
       send the "light" to its destination.`,
       link: "https://globalgamejam.org/2018/games/light-darkness-黑暗中的光芒",
-      target: "_blank",
+      target: "_blank"
     },
     {
       title: "Rube Goldberg Machine",
@@ -98,8 +106,8 @@ function Experience(props) {
       text: `Show the pollutions that mankind has made to the Earth and ways
       each of us can do to help save the Earth!`,
       link: "./rubeGoldberg",
-      target: "_self",
-    },
+      target: "_self"
+    }
   ];
 
   const { setRef } = props;
@@ -122,7 +130,7 @@ function Experience(props) {
 
   return (
     <>
-      <div ref={(ref) => setRef("Experience", ref)} />
+      <div ref={ref => setRef("Experience", ref)} />
       <ScrollAnimation
         className="section-container Experience-container"
         animateIn="fadeIn"
@@ -130,7 +138,7 @@ function Experience(props) {
         <h2 className="section-title">Experience</h2>
         <div className="section-content">
           <div className="Experience-sub-div">
-            {subCards.map((card) => (
+            {subCards.map(card => (
               <div
                 key={card.title}
                 className="Experience-sub-card"
@@ -143,7 +151,7 @@ function Experience(props) {
                     backgroundImage: `url(${card.src})`,
                     backgroundPosition: card.pos ? card.pos : "center",
                     backgroundRepeat: "no-repeat",
-                    backgroundSize: card.size ? card.size : "contain",
+                    backgroundSize: card.size ? card.size : "contain"
                   }}
                 >
                   {card.ribbon ? (
@@ -185,7 +193,7 @@ function Experience(props) {
 }
 
 Experience.propTypes = {
-  setRef: PropTypes.func.isRequired,
+  setRef: PropTypes.func.isRequired
 };
 
 export default Experience;

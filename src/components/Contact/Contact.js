@@ -14,7 +14,7 @@ import "./Contact.css";
 function Contact(props) {
   const { setRef } = props;
   const [currWidth, setCurrWidth] = useState(window.innerWidth);
-  const contactText = `I am currently looking for an internship for summer 2020. 
+  const contactText = `I am currently looking for an internship for summer 2021. 
     Whether if you just want to chat about technology, want to know me better, 
     or provide me with an opportunity, feel free to contact me via:
   `;

@@ -9,7 +9,7 @@ function About(props) {
 
   return (
     <>
-      <div ref={(ref) => setRef("About", ref)} />
+      <div ref={ref => setRef("About", ref)} />
       <ScrollAnimation className="section-container" animateIn="fadeIn">
         <h2 className="section-title animated fadeIn">About</h2>
         <div className="section-content About-content">
@@ -50,7 +50,7 @@ function About(props) {
 }
 
 About.propTypes = {
-  setRef: PropTypes.func.isRequired,
+  setRef: PropTypes.func.isRequired
 };
 
 function SkillTable() {
@@ -62,9 +62,17 @@ function SkillTable() {
     Javascript: "50%",
     Flask: "40%",
     PHP: "40%",
-    MySQL: "30%",
-    Git: "20%",
+    MySQL: "30%"
   };
+
+  const others = [
+    "MongoDB, ",
+    "Socket.IO, ",
+    "Git, ",
+    "Jenkins, ",
+    "Ansible, ",
+    "WebdriverIO"
+  ];
 
   return (
     <div className="container-fluid About-skills">
@@ -81,6 +89,15 @@ function SkillTable() {
           </div>
         </div>
       ))}
+      <h4
+        className="About-others animated fadeIn"
+        style={{
+          animationDelay:
+            (Object.keys(rows).length * 0.1 + 0.4).toString() + "s"
+        }}
+      >
+        Others: {others.map(skill => skill)}
+      </h4>
     </div>
   );
 }
