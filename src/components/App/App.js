@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Home from "../Home/Home";
 import NavBar from "../NavBar/NavBar";
 import About from "../About/About";
-import Experience from "../Experience/Experience";
+import Experience from "../Experience-new/Experience";
 import Contact from "../Contact/Contact";
 import Arrow from "../Arrow/Arrow";
 import "./App.css";

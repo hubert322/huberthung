@@ -69,8 +69,8 @@ function SkillTable() {
     "MongoDB, ",
     "Socket.IO, ",
     "Git, ",
-    "Jenkins, ",
     "Ansible, ",
+    "Jenkins, ",
     "WebdriverIO"
   ];
 

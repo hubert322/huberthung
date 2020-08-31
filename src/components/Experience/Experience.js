@@ -18,8 +18,9 @@ function Experience(props) {
     {
       title: "UI BVT Automation",
       ribbon: "Internship",
-      text: `Implemented a pipeline that can control Windows computers to open downloaded files via Ansible and Jenkins, broadening automated testing’s capabilities.
-      Designed a new BVT UI test case for a new UI interface, from mindmap, to test case review, to implementation via WebdriverIO.`,
+      text: `Implemented a pipeline that set Windows computers as nodes to transfer files back to Ansible server via Ansible, broadening automated testing’s capabilities into controlling Windows.
+      Designed a new BVT UI test case for deny list/allow list interface, from mindmap, to test case review, to implementation via WebdriverIO to automate UI testing and tcpreplay for package detection, resulting in finding 4 P3 bugs 2 weeks prior to release.
+      `,
       src: trendMicro
     },
     {
