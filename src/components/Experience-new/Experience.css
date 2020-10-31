@@ -52,6 +52,11 @@
   text-align: start;
 }
 
+.Experience-card-etc {
+  text-align: start;
+  margin-bottom: 0;
+}
+
 .Experience-card-text {
   text-align: start;
 }
@@ -69,9 +74,22 @@
   background: #7df9ff;
 }
 
+.Experience-card-title-divider {
+  width: 100%;
+  height: 1px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #7df9ff;
+}
+
 .Experience-card-divider {
   width: 100%;
-  border: 1px solid #7df9ff;
+  height: 2px;
+  background-color: #7df9ff;
+}
+
+.Experience-card-etc-highlight {
+  color: #7df9ff;
 }
 
 @media (max-width: 767.98px) {

@@ -38,7 +38,7 @@ function NavButtonList(props) {
       ))}
       <a
         className="NavBar-button NavBar-button-resume"
-        href="https://bit.ly/hubert-resume"
+        href="https://drive.google.com/file/d/1RnX1IEDP4S5NJNGRGPhEyQ3bDd3AjHYW/view?usp=sharing"
         target="_blank"
         rel="noopener noreferrer"
       >
