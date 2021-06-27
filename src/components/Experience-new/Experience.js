@@ -2,6 +2,8 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import ScrollAnimation from "react-animate-on-scroll";
+import discovery from "../../assets/images/discovery.jpg";
+import tsmc from "../../assets/images/tsmc.png";
 import trendMicro from "../../assets/images/Trend-Micro-Logo.png";
 import pictionary from "../../assets/images/pictionary.png";
 import controlnet from "../../assets/images/controlnet.png";
@@ -20,10 +22,31 @@ import "./Experience.css";
 function Experience(props) {
   const subCards = [
     {
+      title: "Custom Slack Command System + CI/CD",
+      ribbon: "Internship",
+      text: [
+        `Designed and implemented a generic, cloud native system with AWS to interact with custom Slack commands and various 3rd party authentications using an asynchronous pub/sub model`,
+        `Technologies Invovled: Go, AWS, Docker, GitHub Actions, Mocha, SonarCloud, Terraform`
+      ],
+      src: discovery,
+      etc: "Internship @ Discovery | Remote | Jun 2021 - Present"
+    },
+    {
+      title: "Factory Facility Re-Imagined with Augmented Reality",
+      ribbon: "Internship",
+      text: [
+        `Created a system to display real-time data and maintenance procedures for factory machines using AR`,
+        `Technologies Invovled: Javascript, Java, Spring Boot, Oracle SQL, C#, Unity, HTML, CSS, Azure DevOps, Docker, Kubernetes`
+      ],
+      src: tsmc,
+      etc: "Internship @ TSMC | Hsinchu, Taiwan | Feb 2021 - May 2021"
+    },
+    {
       title: "CI Pipeline + Automated UI Testing",
       ribbon: "Internship",
       text: [
-        `Developed on deployment pipeline for a cybersecurity network monitoring product Deep Discovery Inspector using Ansible, Jenkins, and WebdriverIO`
+        `Developed on deployment pipeline for a cybersecurity network monitoring product Deep Discovery Inspector`,
+        `Technologies Invovled: Javascript, WebdriverIO (Selenium-based), Jenkins, Ansible`
       ],
       src: trendMicro,
       etc: "Internship @ Trend Micro | Taipei, Taiwan | Jul 2020 - Aug 2020"
@@ -31,7 +54,8 @@ function Experience(props) {
     {
       title: "License Plate Detection Management/Control System",
       text: [
-        `Developed a distributed management/control system in Javascript, PHP, MySQL, C, modbus, and inotify to receive and send signal to grant or deny permissions for 100+ license plates everyday`
+        `Developed a distributed management/control system to receive and send signal to grant or deny permissions for 100+ license plates everyday`,
+        `Technologies Invovled: Javascript, PHP, MySQL, C, Modbus`
       ],
       src: controlnet,
       etc:
@@ -40,20 +64,21 @@ function Experience(props) {
     {
       title: "Pictionary Live",
       text: [
-        `An online, multiplayer version of pictionary developed using React, Flask, MongoDB, and Socket.io that allows synchronous events such as joining room, drawing, and messaging to happen simultaneously across connected clients!`
+        `An online, multiplayer version of pictionary developed that allows synchronous events such as joining room, drawing, and messaging to happen simultaneously across connected clients!`,
+        `Technologies Invovled: Javascript, React, Python, Flask, MongoDB, Socket.io, Heroku`
       ],
       src: pictionary,
       size: "100% 100%",
-      link: "https://pictionary.live",
+      link: "https://github.com/hubert322/pictionary",
       target: "_blank",
-      etc: "Personal Project | May 2020 - Aug 2020"
+      etc: "Personal Project | May 2020 - Jul 2020"
     },
     {
       title: "EngageMe",
       src: engageMe,
       text: [
-        `A Chrome extension that displays the most popular segments of 
-      videos by tracking users’ video-watching activity through crowdsourcing`
+        `A Chrome extension that displays the most popular segments of videos by tracking users’ video-watching activity through crowdsourcing`,
+        `Technologies Invovled: Python, Flask, Firebase, Javascript, HTML, CSS, GCP`
       ],
       link: "https://github.com/rguan72/EngageMe-be",
       target: "_blank",
@@ -62,7 +87,8 @@ function Experience(props) {
     {
       title: "Reward Card System",
       text: [
-        `Designed and implemented a new full stack feature on both web and mobile that allows teachers to generate reward cards and students to redeem them using AngularJs, PHP, MySQL, Java, and Swift`
+        `Designed and implemented web and mobile UI interfaces for generating and redeeming QR codes for teachers and students`,
+        `Technologies Invovled: Javascript, AngularJs, PHP, MySQL, Nginx, Swift, Java`
       ],
       src: lazLogo,
       link: "https://laz.huberthung.me",
@@ -72,7 +98,10 @@ function Experience(props) {
     {
       title: "PWA Example",
       src: pwa,
-      text: [`Progressive Web App Demo!`],
+      text: [
+        `Progressive Web App Demo!`,
+        `Technologies Invovled: Javascript, HTML, CSS`
+      ],
       link: "https://github.com/hubert322/pwa-example",
       target: "_blank",
       etc: "Jun 2019"
@@ -80,7 +109,10 @@ function Experience(props) {
     {
       title: "Blast Beat",
       src: null,
-      text: [`Generate music from text files!!!`],
+      text: [
+        `Generate music from text files!!!`,
+        `Technologies Invovled: Python`
+      ],
       link: "https://github.com/bowman3002/BlastBeatPy",
       target: "_blank",
       etc: "May 2019"
@@ -89,7 +121,8 @@ function Experience(props) {
       title: "Data Analysis on Canvas",
       src: canvas,
       text: [
-        `Analyzed 300,000+ lines of data using Numpy, Matplotlib, and pandas, resulting in 10 categorial features, 7513 training data, and 1851 validation data`
+        `Analyzed 300,000+ lines of Canvas course data to give suggestions on how Canvas could improve course completion rate`,
+        `Technologies Invovled: Python, Numpy, Pandas, Matpotlib`
       ],
       link: "https://bit.ly/data-canvas",
       target: "_blank",
@@ -98,8 +131,8 @@ function Experience(props) {
     {
       title: "Mobile Laser Tag",
       text: [
-        `Created a 1v1 mobile laser tag game that uses computer vision to 
-      track targets.`
+        `Created a 1v1 mobile laser tag game that uses computer vision to track targets`,
+        `Technologies Invovled: Java, Firebase, OpenCV`
       ],
       link: "https://bit.ly/mobile-laser-tag",
       target: "_blank",
@@ -110,7 +143,8 @@ function Experience(props) {
       src: lightDarkness,
       size: "cover",
       text: [
-        `This is a puzzle game where users use different objects such as a reflective mirror or a black hole to try and send the "light" to its destination.`
+        `This is a puzzle game where users use different objects such as a reflective mirror or a black hole to try and send the "light" to its destination`,
+        `Technologies Invovled: C#, Unity`
       ],
       link: "https://globalgamejam.org/2018/games/light-darkness-黑暗中的光芒",
       target: "_blank",
@@ -121,8 +155,7 @@ function Experience(props) {
       src: rubeGoldberg,
       size: "cover",
       text: [
-        `Show the pollutions that mankind has made to the Earth and ways
-      each of us can do to help save the Earth!`
+        `Show the pollutions that mankind has made to the Earth and ways each of us can do to help save the Earth`
       ],
       link: "https://www.youtube.com/watch?v=6olEt4jDLzM&ab_channel=Technion",
       target: "_blank",
@@ -134,7 +167,8 @@ function Experience(props) {
       src: zoom,
       size: "cover",
       text: [
-        `This is a 2d scroller where you need to zoom in and out items in order to get the end!`
+        `This is a 2d scroller where you need to zoom in and out items in order to get the end`,
+        `Technologies Invovled: C#, Unity`
       ],
       link:
         "https://drive.google.com/file/d/1jfEe3Sl1O3v_1lYeMqjeEIwDBoLH40OV/view?usp=sharing",
@@ -146,7 +180,8 @@ function Experience(props) {
       src: godOfPaperPlane,
       size: "cover",
       text: [
-        `This is a 2d runner game where you can control the paper airplane to send a love message to your lover!`
+        `This is a 2d runner game where you can control the paper airplane to send a love message to your lover`,
+        `Technologies Invovled: C#, Unity`
       ],
       link:
         "https://drive.google.com/file/d/0Byrk9Q8aBK2peHlxVmNhN0RvVzg/view?usp=sharing",
@@ -158,7 +193,8 @@ function Experience(props) {
       src: letUsOut,
       size: "cover",
       text: [
-        `This is a multiplayer puzzle game where each player has to move or trigger items in each stage in order to advance onto the next one!`
+        `This is a multiplayer puzzle game where each player has to move or trigger items in each stage in order to advance onto the next one`,
+        `Technologies Invovled: C#, Unity`
       ],
       link: "https://globalgamejam.org/2015/games/let-us-out",
       target: "_blank",
@@ -212,11 +248,35 @@ function Experience(props) {
                     </p>
                   ) : null}
                   <div className="Experience-card-title-divider" />
-                  {card.text.map(text => (
-                    <p key={text} className="Experience-card-text">
-                      {text}
-                    </p>
-                  ))}
+                  {card.text.map(text => {
+                    const keyword = "Technologies Invovled:";
+                    const keywordIndex = text.indexOf(keyword);
+                    if (keywordIndex != -1) {
+                      const beforeKeywordText = text.substr(0, keywordIndex);
+                      const keywordText = text.substr(
+                        keywordIndex,
+                        keyword.length
+                      );
+                      const afterKeywordText = text.substr(
+                        keywordIndex + keyword.length
+                      );
+                      return (
+                        <p key={text} className="Experience-card-text">
+                          {beforeKeywordText}
+                          <span className="Experience-card-keyword">
+                            {keywordText}
+                          </span>
+                          {afterKeywordText}
+                        </p>
+                      );
+                    } else {
+                      return (
+                        <p key={text} className="Experience-card-text">
+                          {text}
+                        </p>
+                      );
+                    }
+                  })}
                   {card.link ? (
                     <a
                       className="Experience-learn-more-button"

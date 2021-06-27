@@ -60,6 +60,9 @@
 .Experience-card-text {
   text-align: start;
 }
+.Experience-card-keyword {
+  color: #7df9ff
+}
 
 .Experience-learn-more-button {
   color: white;
