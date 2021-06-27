@@ -80,7 +80,7 @@ function Experience(props) {
         `A Chrome extension that displays the most popular segments of videos by tracking users’ video-watching activity through crowdsourcing`,
         `Technologies Invovled: Python, Flask, Firebase, Javascript, HTML, CSS, GCP`
       ],
-      link: "https://github.com/rguan72/EngageMe-be",
+      link: "https://devpost.com/software/engageme-85almt",
       target: "_blank",
       etc: "MHacks XII | Oct 2019"
     },
