@@ -14,7 +14,7 @@ import "./Contact.css";
 function Contact(props) {
   const { setRef } = props;
   const [currWidth, setCurrWidth] = useState(window.innerWidth);
-  const contactText = `I am currently looking for an internship for summer 2021. 
+  const contactText = `I am currently looking for new grad software engineering opportunities. 
     Whether if you just want to chat about technology, want to know me better, 
     or provide me with an opportunity, feel free to contact me via:
   `;
@@ -30,7 +30,7 @@ function Contact(props) {
   return (
     <>
       <div ref={ref => setRef("Contact", ref)} />
-      <ScrollAnimation className="section-container" animateIn="fadeIn">
+      <ScrollAnimation className="section-container Contact" animateIn="fadeIn">
         <h2 className="section-title">Contact</h2>
         <div className="section-content Contact-content">
           <h3 className="Contact-text">{contactText}</h3>
