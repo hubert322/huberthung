@@ -16,10 +16,15 @@
   font-size: 4vh;
 }
 
+/* .About-info > h4 {
+  margin-bottom: 5px;
+} */
+
 .About-seperator {
   border-top: 1px solid #7df9ff;
   width: 100%;
   height: 5px;
+  margin-top: 15px;
   margin-bottom: 5px;
 }
 

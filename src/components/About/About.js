@@ -31,12 +31,13 @@ function About(props) {
             <h3 className="animated fadeIn">
               University of Michigan, Ann Arbor
             </h3>
-            <h3 className="animated fadeIn" style={{ animationDelay: "0.1s" }}>
-              Computer Science Engineering
-            </h3>
-            <h3 className="animated fadeIn" style={{ animationDelay: "0.2s" }}>
-              GPA: 3.70
-            </h3>
+            <h4 className="animated fadeIn">Sep 2018 - Dec 2021</h4>
+            <h4 className="animated fadeIn" style={{ animationDelay: "0.1s" }}>
+              B.S.E. Computer Science Engineering
+            </h4>
+            <h4 className="animated fadeIn" style={{ animationDelay: "0.2s" }}>
+              GPA: 3.77
+            </h4>
             <div className="About-seperator" />
             <h3 className="animated fadeIn" style={{ animationDelay: "0.3s" }}>
               Skills
@@ -57,21 +58,26 @@ function SkillTable() {
   const rows = {
     "C++": "80%",
     Python: "70%",
-    React: "60%",
-    AngularJs: "50%",
     Javascript: "50%",
-    Flask: "40%",
-    PHP: "40%",
-    MySQL: "30%"
+    Go: "20%",
+    "Spring Boot": "20%",
+    SQL: "40%",
+    Git: "50%",
+    AWS: "20%"
   };
 
   const others = [
-    "MongoDB, ",
-    "Socket.IO, ",
-    "Git, ",
-    "Ansible, ",
-    "Jenkins, ",
-    "WebdriverIO"
+    "Docker",
+    "Kubernetes",
+    "GitHub Actions",
+    "Ansible",
+    "Jenkins",
+    "WebdriverIO",
+    "Socket.io",
+    "React",
+    "AnguarlJs",
+    "PHP",
+    "Flask"
   ];
 
   return (
@@ -96,7 +102,10 @@ function SkillTable() {
             (Object.keys(rows).length * 0.1 + 0.4).toString() + "s"
         }}
       >
-        Others: {others.map(skill => skill)}
+        Others:{" "}
+        {others.map((skill, index) => {
+          return index != others.length - 1 ? `${skill}, ` : skill;
+        })}
       </h4>
     </div>
   );
