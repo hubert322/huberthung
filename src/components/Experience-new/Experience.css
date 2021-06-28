@@ -64,14 +64,15 @@
   color: #7df9ff
 }
 
-.Experience-learn-more-button {
+.Experience-link-button {
   color: white;
   border: 1px solid #7df9ff;
   border-radius: 3px;
   padding: 5px;
+  margin-right: 10px;
 }
 
-.Experience-learn-more-button:hover {
+.Experience-link-button:hover {
   text-decoration: none;
   color: black;
   background: #7df9ff;

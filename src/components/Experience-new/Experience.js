@@ -4,6 +4,8 @@ import PropTypes from "prop-types";
 import ScrollAnimation from "react-animate-on-scroll";
 import discovery from "../../assets/images/discovery.jpg";
 import tsmc from "../../assets/images/tsmc.png";
+import highlighter from "../../assets/images/highlighter.png";
+import spotifyMixer from "../../assets/images/spotify-mixer.png";
 import trendMicro from "../../assets/images/Trend-Micro-Logo.png";
 import pictionary from "../../assets/images/pictionary.png";
 import controlnet from "../../assets/images/controlnet.png";
@@ -11,6 +13,7 @@ import lazLogo from "../../assets/images/laz.png";
 import engageMe from "../../assets/images/engage-me.png";
 import pwa from "../../assets/images/pwa.png";
 import canvas from "../../assets/images/canvas.png";
+import laserTag from "../../assets/images/laser-tag.png";
 import lightDarkness from "../../assets/images/light-darkness.png";
 import rubeGoldberg from "../../assets/images/rube-goldberg.png";
 import zoom from "../../assets/images/zoom.jpg";
@@ -29,6 +32,7 @@ function Experience(props) {
         `Technologies Invovled: Go, AWS, Docker, GitHub Actions, Mocha, SonarCloud, Terraform`
       ],
       src: discovery,
+      links: [],
       etc: "Internship @ Discovery | Remote | Jun 2021 - Present"
     },
     {
@@ -39,7 +43,42 @@ function Experience(props) {
         `Technologies Invovled: Javascript, Java, Spring Boot, Oracle SQL, C#, Unity, HTML, CSS, Azure DevOps, Docker, Kubernetes`
       ],
       src: tsmc,
+      links: [],
       etc: "Internship @ TSMC | Hsinchu, Taiwan | Feb 2021 - May 2021"
+    },
+    {
+      title: "highlight.ai",
+      text: [
+        `Generate summaries for Zoom lectures`,
+        `Technologies Invovled: Python, OpenAI`
+      ],
+      src: highlighter,
+      links: [
+        {
+          link: "https://devpost.com/software/poggers-ai",
+          text: "Learn More"
+        }
+      ],
+      etc: "hello:world Hackathon | Apr 2021"
+    },
+    {
+      title: "Spotify Mixer",
+      text: [
+        `Make a playlist for you and your friends, full of everyone's favorite songs, with the click of a button`,
+        `Technologies Invovled: Javascript, React, HTML, CSS, Firebase, Gatsby, Tailwind, Netlify`
+      ],
+      src: spotifyMixer,
+      links: [
+        {
+          link: "https://github.com/kwwangkw/spotify-mixer",
+          text: "Learn More"
+        },
+        {
+          link: "https://spotifymixer.com/",
+          text: "Try It"
+        }
+      ],
+      etc: "Personal Project | Jan 2021"
     },
     {
       title: "CI Pipeline + Automated UI Testing",
@@ -49,6 +88,7 @@ function Experience(props) {
         `Technologies Invovled: Javascript, WebdriverIO (Selenium-based), Jenkins, Ansible`
       ],
       src: trendMicro,
+      links: [],
       etc: "Internship @ Trend Micro | Taipei, Taiwan | Jul 2020 - Aug 2020"
     },
     {
@@ -58,6 +98,7 @@ function Experience(props) {
         `Technologies Invovled: Javascript, PHP, MySQL, C, Modbus`
       ],
       src: controlnet,
+      links: [],
       etc:
         "Internship @ Controlnet International | Taipei, Taiwan | May 2020 - Jun 2020"
     },
@@ -69,8 +110,16 @@ function Experience(props) {
       ],
       src: pictionary,
       size: "100% 100%",
-      link: "https://github.com/hubert322/pictionary",
-      target: "_blank",
+      links: [
+        {
+          link: "https://github.com/hubert322/pictionary",
+          text: "Learn More"
+        },
+        {
+          link: "https://pictionary.huberthung.me",
+          text: "Try It"
+        }
+      ],
       etc: "Personal Project | May 2020 - Jul 2020"
     },
     {
@@ -80,8 +129,12 @@ function Experience(props) {
         `A Chrome extension that displays the most popular segments of videos by tracking users’ video-watching activity through crowdsourcing`,
         `Technologies Invovled: Python, Flask, Firebase, Javascript, HTML, CSS, GCP`
       ],
-      link: "https://devpost.com/software/engageme-85almt",
-      target: "_blank",
+      links: [
+        {
+          link: "https://devpost.com/software/engageme-85almt",
+          text: "Learn More"
+        }
+      ],
       etc: "MHacks XII | Oct 2019"
     },
     {
@@ -91,8 +144,16 @@ function Experience(props) {
         `Technologies Invovled: Javascript, AngularJs, PHP, MySQL, Nginx, Swift, Java`
       ],
       src: lazLogo,
-      link: "https://laz.huberthung.me",
-      target: "_blank",
+      links: [
+        {
+          link: "https://github.com/hubert322/reward-card-system",
+          text: "Learn More"
+        },
+        {
+          link: "https://laz.huberthung.me",
+          text: "Try It"
+        }
+      ],
       etc: "Internship @ Learning A-Z | Ann Arbor, MI | May 2019 - Aug 2019"
     },
     {
@@ -102,8 +163,12 @@ function Experience(props) {
         `Progressive Web App Demo!`,
         `Technologies Invovled: Javascript, HTML, CSS`
       ],
-      link: "https://github.com/hubert322/pwa-example",
-      target: "_blank",
+      links: [
+        {
+          link: "https://github.com/hubert322/pwa-example",
+          text: "Learn More"
+        }
+      ],
       etc: "Jun 2019"
     },
     {
@@ -113,8 +178,12 @@ function Experience(props) {
         `Generate music from text files!!!`,
         `Technologies Invovled: Python`
       ],
-      link: "https://github.com/bowman3002/BlastBeatPy",
-      target: "_blank",
+      links: [
+        {
+          link: "https://github.com/bowman3002/BlastBeatPy",
+          text: "Learn More"
+        }
+      ],
       etc: "May 2019"
     },
     {
@@ -124,18 +193,27 @@ function Experience(props) {
         `Analyzed 300,000+ lines of Canvas course data to give suggestions on how Canvas could improve course completion rate`,
         `Technologies Invovled: Python, Numpy, Pandas, Matpotlib`
       ],
-      link: "https://bit.ly/data-canvas",
-      target: "_blank",
+      links: [
+        {
+          link: "https://bit.ly/data-canvas",
+          text: "Learn More"
+        }
+      ],
       etc: "MDataHack I | Jan 2019"
     },
     {
       title: "Mobile Laser Tag",
+      src: laserTag,
       text: [
         `Created a 1v1 mobile laser tag game that uses computer vision to track targets`,
         `Technologies Invovled: Java, Firebase, OpenCV`
       ],
-      link: "https://bit.ly/mobile-laser-tag",
-      target: "_blank",
+      links: [
+        {
+          link: "https://bit.ly/mobile-laser-tag",
+          text: "Try It"
+        }
+      ],
       etc: "MHacks XI | Oct 2018"
     },
     {
@@ -146,8 +224,13 @@ function Experience(props) {
         `This is a puzzle game where users use different objects such as a reflective mirror or a black hole to try and send the "light" to its destination`,
         `Technologies Invovled: C#, Unity`
       ],
-      link: "https://globalgamejam.org/2018/games/light-darkness-黑暗中的光芒",
-      target: "_blank",
+      links: [
+        {
+          link:
+            "https://globalgamejam.org/2018/games/light-darkness-黑暗中的光芒",
+          text: "Learn More"
+        }
+      ],
       etc: "Global Game Jam 2018 | Jan 2018"
     },
     {
@@ -157,8 +240,13 @@ function Experience(props) {
       text: [
         `Show the pollutions that mankind has made to the Earth and ways each of us can do to help save the Earth`
       ],
-      link: "https://www.youtube.com/watch?v=6olEt4jDLzM&ab_channel=Technion",
-      target: "_blank",
+      links: [
+        {
+          link:
+            "https://www.youtube.com/watch?v=6olEt4jDLzM&ab_channel=Technion",
+          text: "Watch It"
+        }
+      ],
       etc:
         "Technion Earth Day Rube Goldberg Machine Challenge | Feb 2017 - Mar 2017"
     },
@@ -170,9 +258,13 @@ function Experience(props) {
         `This is a 2d scroller where you need to zoom in and out items in order to get the end`,
         `Technologies Invovled: C#, Unity`
       ],
-      link:
-        "https://drive.google.com/file/d/1jfEe3Sl1O3v_1lYeMqjeEIwDBoLH40OV/view?usp=sharing",
-      target: "_blank",
+      links: [
+        {
+          link:
+            "https://drive.google.com/file/d/1jfEe3Sl1O3v_1lYeMqjeEIwDBoLH40OV/view?usp=sharing",
+          text: "Try It"
+        }
+      ],
       etc: "Fukushima Game Jam 2016 | Aug 2016"
     },
     {
@@ -183,9 +275,13 @@ function Experience(props) {
         `This is a 2d runner game where you can control the paper airplane to send a love message to your lover`,
         `Technologies Invovled: C#, Unity`
       ],
-      link:
-        "https://drive.google.com/file/d/0Byrk9Q8aBK2peHlxVmNhN0RvVzg/view?usp=sharing",
-      target: "_blank",
+      links: [
+        {
+          link:
+            "https://drive.google.com/file/d/0Byrk9Q8aBK2peHlxVmNhN0RvVzg/view?usp=sharing",
+          text: "Try It"
+        }
+      ],
       etc: "Fukushima Game Jam 2015 | Aug 2015"
     },
     {
@@ -196,8 +292,12 @@ function Experience(props) {
         `This is a multiplayer puzzle game where each player has to move or trigger items in each stage in order to advance onto the next one`,
         `Technologies Invovled: C#, Unity`
       ],
-      link: "https://globalgamejam.org/2015/games/let-us-out",
-      target: "_blank",
+      links: [
+        {
+          link: "https://globalgamejam.org/2015/games/let-us-out",
+          text: "Learn More"
+        }
+      ],
       etc: "Global Game Jam 2015 | Jan 2015"
     }
   ];
@@ -277,16 +377,19 @@ function Experience(props) {
                       );
                     }
                   })}
-                  {card.link ? (
-                    <a
-                      className="Experience-learn-more-button"
-                      href={card.link}
-                      target={card.target}
-                      rel="noopener noreferrer"
-                    >
-                      Learn More
-                    </a>
-                  ) : null}
+                  <div>
+                    {card.links.map(link => (
+                      <a
+                        key={link.link}
+                        className="Experience-link-button"
+                        href={link.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {link.text}
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </div>
               {i + 1 !== subCards.length ? (
