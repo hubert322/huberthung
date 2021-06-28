@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4f4d5ec6f6aee7d8ea57aa366daa2ed3",
+    "revision": "a62879a399af4ef5a1314b56aba2f96f",
     "url": "/index.html"
   },
   {
-    "revision": "02d68d648c398aaf4b71",
+    "revision": "db42621e2a8410678b64",
     "url": "/static/css/2.13ab85ea.chunk.css"
   },
   {
-    "revision": "2407ebc8d09c63ab9e23",
-    "url": "/static/css/main.ff70d66b.chunk.css"
+    "revision": "7c3d6f1fe255d750b1e9",
+    "url": "/static/css/main.99f24533.chunk.css"
   },
   {
-    "revision": "02d68d648c398aaf4b71",
-    "url": "/static/js/2.df9ad871.chunk.js"
+    "revision": "db42621e2a8410678b64",
+    "url": "/static/js/2.da343096.chunk.js"
   },
   {
-    "revision": "2407ebc8d09c63ab9e23",
-    "url": "/static/js/main.8f73adba.chunk.js"
+    "revision": "7c3d6f1fe255d750b1e9",
+    "url": "/static/js/main.2bf8787c.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -36,12 +36,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/controlnet.ac4a9c52.png"
   },
   {
+    "revision": "84cc4c0bc301f48bc8e692e52a3dc3bf",
+    "url": "/static/media/discovery.84cc4c0b.jpg"
+  },
+  {
     "revision": "5a6226d0e01515a11118965d67ed589d",
     "url": "/static/media/engage-me.5a6226d0.png"
   },
   {
     "revision": "89cecd775c486f33a90522e4ddc315e6",
     "url": "/static/media/god-of-paper-plane.89cecd77.png"
+  },
+  {
+    "revision": "788be98c36d572ffeccdc7369081cbdf",
+    "url": "/static/media/highlighter.788be98c.png"
+  },
+  {
+    "revision": "560959e5b620b5d185bf890d63f7a5ca",
+    "url": "/static/media/laser-tag.560959e5.png"
   },
   {
     "revision": "5416a131ef3b80dedcc83a019bb481cd",
@@ -70,6 +82,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "6f8c4f58b888192ba3c286526373db2a",
     "url": "/static/media/rube-goldberg.6f8c4f58.png"
+  },
+  {
+    "revision": "8f7a9fc82b2f8bbb3a5a63a8121cebda",
+    "url": "/static/media/spotify-mixer.8f7a9fc8.png"
+  },
+  {
+    "revision": "13fdad71d9efae8d81e38032619d7fca",
+    "url": "/static/media/tsmc.13fdad71.png"
   },
   {
     "revision": "f910be638fa9e6b4c0ad7e6e49a667e2",
