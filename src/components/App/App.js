@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Home from "../Home/Home";
 import NavBar from "../NavBar/NavBar";
 import About from "../About/About";
 import Experience from "../Experience-new/Experience";
 import Contact from "../Contact/Contact";
 import Arrow from "../Arrow/Arrow";
+import Portfolio from "../Portfolio/Portfolio";
 import "./App.css";
 
 function App() {
   const refs = {};
   const [currWidth, setCurrWidth] = useState(window.innerWidth);
   const mediumDeviceMinWidth = 768;
+  const location = useLocation();
 
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -38,10 +41,23 @@ function App() {
     }
   }
 
+  if (location.pathname === "/portfolio") {
+    return (
+      <div className="d-flex flex-column justify-content-center align-items-center App">
+        <Home setRef={setRef} onClick={scrollToRef} arrowTarget="Portfolio" />
+        <NavBar onClick={scrollToRef} navList={["Portfolio"]} />
+        <Portfolio setRef={setRef} />
+        <Arrow onClick={scrollToRef} target="Contact" />
+      <Contact setRef={setRef} />
+      <Arrow onClick={scrollToRef} target="Home" />
+      </div>
+    );
+  }
+
   return (
     <div className="d-flex flex-column justify-content-center align-items-center App">
-      <Home setRef={setRef} onClick={scrollToRef} />
-      <NavBar onClick={scrollToRef} />
+      <Home setRef={setRef} onClick={scrollToRef} arrowTarget="About" />
+      <NavBar onClick={scrollToRef} navList={["About", "Experience", "Contact"]} />
       <About setRef={setRef} />
       <Arrow onClick={scrollToRef} target="Experience" />
       <Experience setRef={setRef} />

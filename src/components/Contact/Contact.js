@@ -14,8 +14,7 @@ import "./Contact.css";
 function Contact(props) {
   const { setRef } = props;
   const [currWidth, setCurrWidth] = useState(window.innerWidth);
-  const contactText = `I am currently looking for new grad software engineering opportunities. 
-    Whether if you just want to chat about technology, want to know me better, 
+  const contactText = `Whether if you want to chat about technology or music, want to know me better, 
     or provide me with an opportunity, feel free to contact me via:
   `;
 
@@ -59,13 +58,13 @@ function Contact(props) {
               </a>
               <a
                 className="Contact-link"
-                href="https://www.instagram.com/huberthung322"
+                href="https://www.instagram.com/hubert.hung.music/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaInstagram />
               </a>
-              <a className="Contact-link" href="mailto:huberth@umich.edu">
+              <a className="Contact-link" href="mailto:hubert322@gmail.com">
                 <FaRegEnvelope />
               </a>
             </IconContext.Provider>

@@ -1,4 +1,5 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import "./NavBar.css";
 import PropTypes from "prop-types";
 
@@ -15,7 +16,8 @@ function NavBar(props) {
 
 function NavButtonList(props) {
   const { onClick } = props;
-  const navList = ["About", "Experience", "Contact"];
+  const navList = props.navList;
+  const location = useLocation();
 
   return (
     <>
@@ -36,14 +38,16 @@ function NavButtonList(props) {
           {navItem}
         </button>
       ))}
-      <a
-        className="NavBar-button NavBar-button-resume"
-        href="https://drive.google.com/file/d/1RnX1IEDP4S5NJNGRGPhEyQ3bDd3AjHYW/view?usp=sharing"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Resume
-      </a>
+      {location.pathname === "/" ? (
+        <a
+          className="NavBar-button NavBar-button-resume"
+          href="https://drive.google.com/file/d/1RnX1IEDP4S5NJNGRGPhEyQ3bDd3AjHYW/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Resume
+        </a>
+      ) : null}
     </>
   );
 }

@@ -5,7 +5,7 @@ import Arrow from "../Arrow/Arrow";
 import "./Home.css";
 
 function Home(props) {
-  const { setRef, onClick } = props;
+  const { setRef, onClick, arrowTarget } = props;
 
   return (
     <div className="Home" ref={ref => setRef("Home", ref)}>
@@ -16,7 +16,7 @@ function Home(props) {
             <h1>Hello World</h1>
             <h1>Hubert Hung</h1>
           </ScrollAnimation>
-          <Arrow onClick={onClick} target="About" />
+          <Arrow onClick={onClick} target={arrowTarget} />
         </div>
       </div>
     </div>
