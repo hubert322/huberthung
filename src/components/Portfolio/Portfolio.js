@@ -18,7 +18,7 @@ function Portfolio(props) {
       text: [
         `The song is about the complex romantic relationships I have had as a young adult living in New York City`,
         `The key change from F major in the verse to D minor in the chorus reflects the ups and downs of these relationships`,
-        `The intensity of the song hightens as the song progresses and reaches its climax at the guitar solo, reflecting the progression of tension and release in the relationship`,
+        `The intensity of the song heightens as the song progresses and reaches its climax at the guitar solo, reflecting the progression of tension and release in the relationship`,
         `Every single element of the song was created by me except the final mastering`,
         `The album cover is also created entirely by me except the samples of the paper textures`, 
       ],
